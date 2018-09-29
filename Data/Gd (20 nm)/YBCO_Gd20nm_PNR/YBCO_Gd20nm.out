@@ -1,0 +1,82 @@
+-- Model 0 YBCOGDHF_650mT_BaseTemp
+.probe
+  .Aguide = Parameter(270, name='Aguide YBCOGDHF_650mT_BaseTemp')
+  .H = Parameter(0, name='H YBCOGDHF_650mT_BaseTemp')
+  .mm
+    .back_absorption = Parameter(1, name='back_absorption YBCOGDHF_650mT_BaseTemp')
+    .background = Parameter(3.38842e-06, name='background YBCOGDHF_650mT_BaseTemp', bounds=(1e-08,5e-05))
+    .intensity = Parameter(0.174981, name='intensity YBCOGDHF_650mT_BaseTemp', bounds=(0.001,1.2))
+    .theta_offset = Parameter(-0.0134556, name='theta_offset YBCOGDHF_650mT_BaseTemp', bounds=(-0.015,0.015))
+  .mp = None
+  .pm = None
+  .pp
+    .back_absorption = Parameter(1, name='back_absorption YBCOGDHF_650mT_BaseTemp')
+    .background = Parameter(3.38842e-06, name='background YBCOGDHF_650mT_BaseTemp', bounds=(1e-08,5e-05))
+    .intensity = Parameter(0.174981, name='intensity YBCOGDHF_650mT_BaseTemp', bounds=(0.001,1.2))
+    .theta_offset = Parameter(-0.0134556, name='theta_offset YBCOGDHF_650mT_BaseTemp', bounds=(-0.015,0.015))
+.sample
+  .layers
+    [0]
+      .interface = Parameter(59.9895, name='STO interface', bounds=(1,80))
+      .material
+        .irho = Parameter(0, name='STO irho')
+        .rho = Parameter(3.325, name='STO rho')
+      .thickness = Parameter(100, name='STO thickness')
+    [1]
+      .interface = Parameter(150, name='YBCO1 interface', bounds=(15,150))
+      .material
+        .irho = Parameter(0, name='YBCO1 irho')
+        .rho = Parameter(4.64186, name='YBCO1 rho', bounds=(2,4.652))
+      .thickness = Parameter(845.217, name='YBCO1 thickness', bounds=(0,900))
+    [2]
+      .interface = Parameter(5.00001, name='YBCO2 interface', bounds=(5,150))
+      .material
+        .irho = Parameter(0, name='YBCO2 irho')
+        .rho = (Mag t * YBCO1 rho)
+      .thickness = (Mag t - YBCO1 thickness)
+    [3]
+      .interface = Parameter(18.6166, name='GdO interface', bounds=(2,150))
+      .magnetism
+        .dead_above = Parameter(0, name='GdO deadM above')
+        .dead_below = Parameter(39.747, name='GdO deadM below', bounds=(0,70))
+        .interface_above = None
+        .interface_below = None
+        .rhoM = Parameter(0.229806, name='GdO rhoM', bounds=(0,2))
+        .thetaM = Parameter(270, name='GdO thetaM')
+      .material
+        .irho = (GdOx irho Ratio * Gd irho)
+        .rho = (GdOx rho Ratio * Gd rho)
+      .thickness = Parameter(198.827, name='GdO thickness', bounds=(100,300))
+    [4]
+      .interface = Parameter(91.1102, name='Gd interface', bounds=(2,150))
+      .magnetism
+        .dead_above = Parameter(0, name='Gd deadM above')
+        .dead_below = Parameter(0, name='Gd deadM below')
+        .interface_above = None
+        .interface_below = None
+        .rhoM = Parameter(0.299382, name='Gd rhoM', bounds=(0,2))
+        .thetaM = Parameter(270, name='Gd thetaM')
+      .material
+        .irho = Parameter(1.8923, name='Gd irho', bounds=(1,4))
+        .rho = Parameter(1.5, name='Gd rho', bounds=(1.5,3.5))
+      .thickness = Parameter(183.316, name='Gd thickness', bounds=(100,300))
+    [5]
+      .interface = Parameter(61.3852, name='Au interface', bounds=(2,100))
+      .material
+        .irho = Parameter(0, name='Au irho')
+        .rho = Parameter(4.9, name='Au rho', bounds=(4.3,4.9))
+      .thickness = Parameter(72.7648, name='Au thickness', bounds=(2,200))
+    [6]
+      .interface = Parameter(350, name='Cap interface', bounds=(100,350))
+      .material
+        .irho = Parameter(0, name='Cap irho')
+        .rho = Parameter(1.02429, name='Cap rho', bounds=(0,1.5))
+      .thickness = Parameter(1.00001, name='Cap thickness', bounds=(1,300))
+    [7]
+      .interface = Parameter(0, name='air interface')
+      .material = None
+      .thickness = Parameter(0, name='air thickness')
+  .thickness = stack thickness:1756.05
+
+[chisq=1.31(26), nllf=74.5441]
+[overall chisq=1.71(34), nllf=74.5441]

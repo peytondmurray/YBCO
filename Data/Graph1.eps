@@ -1,0 +1,2786 @@
+%!PS-Adobe-3.0 EPSF-3.0
+%%BoundingBox: 0 0 267 186
+%%Creator: IgorPro
+%%Title: Graph1
+%%Creation Date: Tue, Oct 31, 2017 4:31 PM
+%%LanguageLevel: 2
+%%EndComments
+%%BeginProlog
+%%EndProlog
+%%BeginResource: procset IgorProcset 1.0 0
+/IgorSave save def		% Level 2 procs
+
+200 dict begin
+
+0 setgray 0 setlinecap
+1 setlinewidth 0 setlinejoin
+1 setmiterlimit [] 0 setdash
+
+/aw 0 def 	/ah 0 def
+/x0 0 def	/y0 0 def	/x1 0 def	/y1 0 def
+/rx0 0 def	/ry0 0 def	/rx1 0 def	/ry1 0 def
+/tmp0 0 def /tmp1 0 def
+/packedRed 0 def /packedGreen 0 def /packedBlue 0 def
+/x 0 def	/y 0 def	/w 0 def	/c 0 string def
+
+/rbak 1 def	/gbak 1 def	/bbak 1 def
+/rfor 0 def	/gfor 0 def	/bfor 0 def
+
+/bdef{bind def}bind def
+/ldef{load def}bdef
+/xdef{exch def}bdef
+
+/useCMYK 0 def
+/useRound false def
+
+
+/Mysetrgbcolor{	% r g b
+	useCMYK 1 eq
+	{
+		3 {1 exch sub 3 -1 roll} repeat			% c=1-r, m= 1-g, y= 1-b
+		dup
+		2 index 2 copy gt {exch} if pop
+		3 index 2 copy gt {exch} if pop
+%		2 div									% k= (min of c,m,y)/2
+		4 1 roll
+		3 {3 index sub 3 -1 roll} repeat		% sub k from c,m & y
+		4 -1 roll
+		setcmykcolor
+	}
+	{ setrgbcolor }
+	ifelse
+}bdef
+
+%******** BEGIN NEW PAT STUFF ********** [
+/transparentPats 0 def
+
+/l {lineto} bdef
+/m {moveto} bdef
+/PatCom{pop transparentPats 0 eq {UseBack 0 0 8 8 rectfill} if UseFore}bdef
+
+/SpecialPatProcs
+<<
+	/p0102040810204080 {PatCom 6.5 0 m 0 6.5 l 0 7.5 l 7.5 0 l 6.5 0 l 8 6.5 m 6.5 8 l 7.5 8 l 8 7.5 l 8 6.5 l fill}bind
+	/p8040201008040201 {PatCom 0 0.5 m 7.5 8 l 8 8 l 8 7.5 l 0.5 0 l 0 0 l 0 0.5 l 0 7.5 m 0 8 l 0.5 8 l 0 7.5 l 7.5 0 m 8 0.5 l 8 0 l 7.5 0 l fill}bind
+	/p03060C183060C081 {PatCom 5.5 0 m 0 5.5 l 0 7.5 l 7.5 0 l 5.5 0 l 8 5.5 m 5.5 8 l 7.5 8 l 8 7.5 l 8 5.5 l fill}bind
+	/pC06030180C060381 {PatCom 0 0 m 0 1.5 l 6.5 8 l 8 8 l 8 7.5 l 0.5 0 l 0 0 l 0 7.5 m 0 8 l 0.5 8 l 0 7.5 l 6.5 0 m 8 1.5 l 8 0 l 6.5 0 l fill}bind
+	/p83070E1C3870E0C1 {PatCom 5.5 0 m 0 5.5 l 0 8 l 0.5 8 l 8 0.5 l 8 0 l 5.5 0 l 0 0 m 0 0.5 l 0.5 0 l 0 0 l 8 5.5 m 5.5 8 l 8 8 l 8 5.5 l fill}bind
+	/pC1E070381C0E0783 {PatCom 0 0 m 0 1.5 l 6.5 8 l 8 8 l 8 6.5 l 1.5 0 l 0 0 l 0 6.5 m 0 8 l 1.5 8 l 0 6.5 l 6.5 0 m 8 1.5 l 8 0 l 6.5 0 l fill}bind
+	/p1122448811224488 {PatCom 2.5 0 m 0 2.5 l 0 3.5 l 3.5 0 l 2.5 0 l 6.5 0 m 0 6.5 l 0 7.5 l 7.5 0 l 6.5 0 l 8 2.5 m 2.5 8 l 3.5 8 l 8 3.5 l 8 2.5 l 8 6.5 m 6.5 8 l 7.5 8 l 8 7.5 l 8 6.5 l fill}bind
+	/p8844221188442211 {PatCom 7.5 0 m 8 0.5 l 8 0 l 7.5 0 l 3.5 0 m 8 4.5 l 8 3.5 l 4.5 0 l 3.5 0 l 0 0 m 0 0.5 l 7.5 8 l 8 8 l 8 7.5 l 0.5 0 l 0 0 l 0 3.5 m 0 4.5 l 3.5 8 l 4.5 8 l 0 3.5 l 0 7.5 m 0 8 l 0.5 8 l 0 7.5 l fill}bind
+	
+	/p3366CC993366CC99 {PatCom 1.5 0 m 0 1.5 l 0 3.5 l 3.5 0 l 1.5 0 l 5.5 0 m 0 5.5 l 0 7.5 l 7.5 0 l 5.5 0 l 8 1.5 m 1.5 8 l 3.5 8 l 8 3.5 l 8 1.5 l 8 5.5 m 5.5 8 l 7.5 8 l 8 7.5 l 8 5.5 l fill}bind
+	/pCC663399CC663399 {PatCom 6.5 0 m 8 1.5 l 8 0 l 6.5 0 l 2.5 0 m 8 5.5 l 8 3.5 l 4.5 0 l 2.5 0 l 0 0 m 0 1.5 l 6.5 8 l 8 8 l 8 7.5 l 0.5 0 l 0 0 l 0 3.5 m 0 5.5 l 2.5 8 l 4.5 8 l 0 3.5 l 0 7.5 m 0 8 l 0.5 8 l 0 7.5 l fill}bind
+	/p77EEDDBB77EEDDBB {PatCom 0.5 0 m 0 0.5 l 0 3.5 l 3.5 0 l 0.5 0 l 4.5 0 m 0 4.5 l 0 7.5 l 7.5 0 l 4.5 0 l 8 0.5 m 0.5 8 l 3.5 8 l 8 3.5 l 8 0.5 l 8 4.5 m 4.5 8 l 7.5 8 l 8 7.5 l 8 4.5 l fill}bind
+	/pEE77BBDDEE77BBDD {PatCom 0 0 m 0 2.5 l 5.5 8 l 8 8 l 8 7.5 l 0.5 0 l 0 0 l 1.5 0 m 8 6.5 l 8 3.5 l 4.5 0 l 1.5 0 l 5.5 0 m 8 2.5 l 8 0 l 5.5 0 l 0 3.5 m 0 6.5 l 1.5 8 l 4.5 8 l 0 3.5 l 0 7.5 m 0 8 l 0.5 8 l 0 7.5 l fill}bind
+	/pE4C993274E9C3972 {PatCom 0 0 m 0 2.5 l 2.5 0 l 0 0 l 4.5 0 m 0 4.5 l 0 5.5 l 5.5 0 l 4.5 0 l 7.5 0 m 0 7.5 l 0 8 l 2.5 8 l 8 2.5 l 8 0 l 7.5 0 l 8 4.5 m 4.5 8 l 5.5 8 l 8 5.5 l 8 4.5 l 8 7.5 m 7.5 8 l 8 8 l 8 7.5 l fill}bind
+	/p2793C9E472399C4E {PatCom 5.5 0 m 8 2.5 l 8 1.5 l 6.5 0 l 5.5 0 l 0.5 0 m 8 7.5 l 8 4.5 l 3.5 0 l 0.5 0 l 0 1.5 m 0 2.5 l 5.5 8 l 6.5 8 l 0 1.5 l 0 4.5 m 0 7.5 l 0.5 8 l 3.5 8 l 0 4.5 l fill}bind
+>>
+def
+
+/Pat8Image2{			% patternstring -- 
+	transparentPats 0 eq {UseBack 0 0 8 8 rectfill} if
+	UseFore
+	0 exch									% y patstr
+	{
+		0 exch								% y x value
+		128 8{								% y x value bitmask
+			dup 2 index and 0 eq not{		% y x bitmask value boolval
+				2 index 4 index 1 1 rectfill
+			}if
+			-1 bitshift 3 2 roll 
+			1 add
+			3 1 roll
+		}repeat
+		pop pop pop
+		1 add
+	}forall
+	pop
+}bdef
+
+/PatstrToName{
+	(p0000000000000000)	17 string copy	% apparantly literal strings are global objects
+	exch 1 exch
+	{
+		16 (00) cvrs dup length 
+		3 index 3 index 3 -1 roll 2 exch sub add
+		3 -1 roll putinterval
+		2 add
+	}forall
+	pop
+	cvn
+}bdef
+
+
+
+/ThePatTemplate
+<<
+	/PatternType 1		% Tiling pattern
+	/PaintType 1		% Colored
+	/TilingType 1
+	/BBox [0 0 8 8]
+	/XStep 8
+	/YStep 8
+	/mypatstr <03060C183060C081>
+	/PaintProc {begin mypatstr Pat8Image2 end}bind
+>>
+def
+
+
+
+/FillPattern{	% patternstring --
+	gsave
+	ThePatTemplate /mypatstr 2 index put
+	PatstrToName SpecialPatProcs 1 index known{
+		SpecialPatProcs exch get
+	}{
+		{begin mypatstr Pat8Image2 end}bind
+	}ifelse
+	ThePatTemplate /PaintProc 3 -1 roll put
+	ThePatTemplate matrix makepattern setpattern fill
+	grestore
+	/transparentPats 0 def
+}bdef
+
+%******** END NEW PAT STUFF ********** ]
+
+
+
+/UseBack{ rbak gbak bbak Mysetrgbcolor }bdef
+/UseFore{ rfor gfor bfor Mysetrgbcolor }bdef
+/SetBack {/bbak xdef /gbak xdef /rbak xdef }bdef
+/SetFore {/bfor xdef /gfor xdef /rfor xdef }bdef
+
+
+/ps {setlinewidth} bdef	
+/clw {currentlinewidth} bdef
+/sd {0 setdash} bdef
+
+/mstroke {0 clw eq {newpath}{stroke} ifelse} bdef
+
+/_R{ .5 sub round .5 add}bdef
+/allign{ useRound {transform _R exch _R exch itransform} if }bdef
+/L {allign lineto} bdef
+/M {allign moveto} bdef
+
+/addto { dup load exec 3 -1 roll add store }bdef
+/MacLine{		% xto yto xfrom yfrom MacLine --
+	newpath		% only handles horizontal or vertical lines
+	/y0 xdef /x0 xdef /y1 xdef /x1 xdef
+	x1 x0 sub abs
+	y1 y0 sub abs gt
+	{clw x1 x0 gt {/x1}{/x0}ifelse  addto  clw 2 div dup /y0 addto /y1 addto}
+	{clw y1 y0 gt {/y1}{/y0}ifelse  addto  clw 2 div dup /x0 addto /x1 addto}
+	ifelse
+	x0 y0 M
+	x1 y1 L
+	mstroke
+}bdef
+
+/FillPath{		% graylevel FillPath --   fills current path and leaves path alive
+	gsave
+	dup 1 exch sub		% glev 1-glev
+	rbak 2 index mul	rfor 2 index mul add
+	gbak 3 index mul	gfor 3 index mul add
+	bbak 4 index mul	bfor 4 index mul add
+	Mysetrgbcolor
+	pop pop
+	fill
+	grestore
+}bdef
+
+/StrokePath{		% linejoin StrokePath --   strokes current path and leaves path alive
+	gsave
+	setlinejoin
+	mstroke
+	grestore
+}bdef
+
+/RectPath{		% x0 y0 x1 y1 RectPath -- sets current path to a rectange
+	/y1 xdef /x1 xdef /y0 xdef /x0 xdef
+	newpath
+	x0 y0 M
+	x1 y0 L
+	x1 y1 L
+	x0 y1 L
+	closepath
+}bdef
+
+/PaintRect{		% x0 y0 x1 y1 graylevel PaintRect --
+	gsave
+	5 1 roll
+	RectPath
+	FillPath
+	grestore
+}bdef
+
+
+
+
+% **** begin image stuff *****
+% The following are used for images. This has to be kept
+% in synch with corresponding code in ImageDisp.c.In particular
+% the expansion factor, 8, has to be in synch. LH010606: now to
+% fix colorscales in layouts, expansion factor is in variable.
+% packedcolor is (red*256+green)*256+blue
+
+/ExpFact 8 def	% default expansion factor
+
+/SetPackedColor{	% packedcolor SetPackedColor --
+	dup 256 mod /tmp0 xdef	% extract blue
+	256 idiv
+	dup 256 mod /tmp1 xdef	% extract green
+	256 idiv 				% extract red
+	255 div /packedRed xdef
+	tmp1 255 div /packedGreen xdef
+	tmp0 255 div /packedBlue xdef
+}bdef
+
+/IR_FillRect{
+	gsave
+	newpath
+	rx0 ry0 M
+	rx1 ry0 L
+	rx1 ry1 L
+	rx0 ry1 L
+	closepath
+	packedRed packedGreen packedBlue Mysetrgbcolor
+	fill
+	grestore
+}bdef
+
+/NewRectImageLine{	% x0 y0 x1 y1 packedcolor NewRectImageLine --
+	SetPackedColor
+
+	/ry1 xdef /rx1 xdef /ry0 xdef /rx0 xdef	% remember starting rectange for following calls
+	
+	IR_FillRect
+}bdef
+
+/rx{		% xdist rx --
+	ExpFact div
+	dup 0 lt
+	{ rx0 /rx1 xdef rx1 add /rx0 xdef }		% neg delta steps left
+	{ rx1 /rx0 xdef rx0 add /rx1 xdef }
+	ifelse
+	IR_FillRect
+}bdef
+
+/ry{		% ydist rr --
+	ExpFact div
+	dup 0 lt
+	{ ry1 /ry0 xdef ry0 exch sub /ry1 xdef }		% neg delta steps down
+	{ ry0 /ry1 xdef ry1 exch sub /ry0 xdef }
+	ifelse
+	IR_FillRect
+}bdef
+
+
+/cx{		% xdist packedcolor cx --
+	SetPackedColor
+	rx
+}bdef
+
+/cy{		% ydist packedcolor cx --
+	SetPackedColor
+	ry
+}bdef
+
+% **** end image stuff *****
+
+
+
+/EraseRect{		% x0 y0 x1 y1 EraseRect --  fills rect with background color
+	gsave
+	RectPath
+	UseBack fill
+	grestore
+}bdef
+
+/FrameRect{		% x0 y0 x1 y1 FrameRect --
+	RectPath
+	mstroke
+}bdef
+
+/FrameMacRect{		% x0 y0 x1 y1 FrameMacRect --  Mac-like version
+	RectPath
+	mstroke
+}bdef
+
+
+/ellipse{
+	/savematrix matrix currentmatrix def
+	translate scale 0 0 1 0 360 arc
+	savematrix setmatrix
+}bdef
+
+
+
+/OvalPath{		% x0 y0 x1 y1 OvalPath -- sets current path to an oval inside rectange
+	/y1 xdef /x1 xdef /y0 xdef /x0 xdef
+	newpath
+	x0 x1 sub abs 2 div y0 y1 sub abs 2 div x0 x1 add 2 div y0 y1 add 2 div ellipse
+	closepath
+}bdef
+
+
+/PaintOval{		% x0 y0 x1 y1 graylevel PaintOval --
+	gsave
+	5 1 roll
+	OvalPath
+	FillPath
+	grestore
+}bdef
+
+/EraseOval{		% x0 y0 x1 y1 EraseOval --  fills with background color
+	gsave
+	OvalPath
+	UseBack fill
+	grestore
+}bdef
+
+/FrameOval{		% x0 y0 x1 y1 FrameOval --
+	OvalPath
+	mstroke
+}bdef
+
+
+/RRectPath{		% x0 y0 x1 y1 r OvalPath -- sets current path to rounded rectange, radius r
+	/radius xdef
+	/y1 xdef /x1 xdef /y0 xdef /x0 xdef
+	newpath
+	x0 radius add y0 M
+	x1 y0 x1 y1 radius arcto 4{pop}repeat
+	x1 y1 x0 y1 radius arcto 4{pop}repeat
+	x0 y1 x0 y0 radius arcto 4{pop}repeat
+	x0 y0 x1 y0 radius arcto 4{pop}repeat
+	closepath
+}bdef
+
+
+/PaintRRect{		% x0 y0 x1 y1 r graylevel PaintRRect --
+	gsave
+	6 1 roll
+	RRectPath
+	FillPath
+	grestore
+}bdef
+
+/EraseRRect{		% x0 y0 x1 y1 r EraseRRect --  fills rect with background color
+	gsave
+	RRectPath
+	UseBack fill
+	grestore
+}bdef
+
+/FrameRRect{		% x0 y0 x1 y1 r FrameRect --
+	RRectPath
+	mstroke
+}bdef
+
+
+
+
+/CapLine{		% x0 y0 x1 y1 linecap CapLine -- draws line using given line cap
+	gsave
+	setlinecap
+	/y1 xdef /x1 xdef /y0 xdef /x0 xdef
+	newpath
+	x0 y0 M
+	x1 y1 L
+	mstroke
+	grestore
+}bdef
+
+/Arrow{		% x0 y0 x1 y1 width height graylevel Arrow -- draws arrow at end of line from P0 to P1
+	gsave
+	/gl xdef 1 add /aw xdef 1 add /ah xdef /y0 xdef /x0 xdef /y1 xdef /x1 xdef 
+	x0 y0 translate
+	/x1 x1 x0 sub def
+	/y1 y1 y0 sub def
+	y1 x1 atan rotate
+	newpath
+	0 0 M
+	aw ah 2 div L
+	aw ah 2 div neg L
+	closepath
+	gl FillPath
+%	10 setmiterlimit
+%	1 ps
+%	0 StrokePath
+	grestore
+}bdef
+
+
+% ************ fonts ************
+
+
+/normal 0 def
+/bold 1 def
+/italic 2 def
+/underline 4 def
+/outline 8 def
+/shadow 16 def
+
+/FACE1 bold italic or def
+/FACE2 outline shadow or def
+
+/Shadow {
+	gsave
+	siz 0.08 mul 1 index mul x add
+	exch siz 0.07 mul mul y add M
+	c show
+	grestore
+} def
+
+/Outline {
+	gsave
+	siz .02 mul setlinewidth
+	x y M c true charpath
+	gsave UseBack fill grestore stroke
+	grestore
+} def
+
+/Underline{
+	gsave
+	siz 0.08 mul ps
+	x y clw add M x c stringwidth pop add y clw add L stroke
+	grestore
+}bdef
+
+/DoShow{	% assumes x,y,c are already set
+	fontkind FACE2 and
+	dup normal eq 				{c x y M show} if
+	dup outline eq 				{Outline} if
+	dup shadow eq 				{1 Shadow Outline} if
+	outline shadow or eq 		{1 Shadow 1.5 Shadow Outline} if
+	fontkind underline and 0 ne { Underline } if
+}bdef
+
+/DoWShow{	% assumes x,y,c & w are already set
+	gsave
+	x y translate
+	/x 0 def  /y 0 def
+	w c stringwidth pop div 1 scale
+	DoShow
+	grestore
+}bdef
+
+/S{
+	/y xdef /x xdef /c xdef
+	DoShow
+}bdef
+
+/WS{		% string x y desiredwidth WS -
+	/w xdef /y xdef /x xdef /c xdef
+	DoWShow
+}bdef
+
+/F{
+	/fontkind xdef
+	findfont exch /siz xdef [siz 0 0 siz neg  0 0] makefont setfont
+}bdef
+
+
+
+/Re-encode {
+	dup length array copy
+	/eap 0 def
+	exch {
+		dup type /integertype eq
+		{ /eap xdef }
+		{
+			1 index
+			exch
+			eap exch
+			put
+			/eap eap 1 add def
+		}
+		ifelse
+	} forall
+} bind def
+
+[ 39/quotesingle 96/grave 128/Adieresis/Aring/Ccedilla/Eacute/Ntilde/Odieresis
+/Udieresis/aacute/agrave/acircumflex/adieresis/atilde/aring/ccedilla/eacute
+/egrave/ecircumflex/edieresis/iacute/igrave/icircumflex/idieresis/ntilde
+/oacute/ograve/ocircumflex/odieresis/otilde/uacute/ugrave/ucircumflex
+/udieresis/dagger/degree/cent/sterling/section/bullet/paragraph/germandbls
+/registered/copyright/trademark/acute/dieresis/notequal/AE/Oslash
+/infinity/plusminus/lessequal/greaterequal/yen/mu/partialdiff/summation
+/product/pi/integral/ordfeminine/ordmasculine/Omega/ae/oslash
+/questiondown/exclamdown/logicalnot/radical/florin/approxequal/Delta/guillemotleft
+/guillemotright/ellipsis/space/Agrave/Atilde/Otilde/OE/oe
+/endash/emdash/quotedblleft/quotedblright/quoteleft/quoteright/divide/lozenge
+/ydieresis/Ydieresis/fraction/Euro/guilsinglleft/guilsinglright/fi/fl
+/daggerdbl/periodcentered/quotesinglbase/quotedblbase/perthousand
+/Acircumflex/Ecircumflex/Aacute/Edieresis/Egrave/Iacute/Icircumflex/Idieresis/Igrave
+/Oacute/Ocircumflex/apple/Ograve/Uacute/Ucircumflex/Ugrave/dotlessi/circumflex/tilde
+/macron/breve/dotaccent/ring/cedilla/hungarumlaut/ogonek/caron]
+/zzz xdef
+
+/OurEncoding{ zzz StandardEncoding Re-encode }bdef
+
+/EncodeFont	{
+	findfont
+	dup length dict begin
+	{
+		1 index /FID ne
+		{ def }
+		{ pop pop }
+		ifelse
+	} forall
+	/FontName xdef
+	/Encoding xdef
+	FontName currentdict
+	end
+	definefont pop
+} bind def
+
+%%EndResource
+%%BeginFont: /OF0
+11 dict begin
+/FontName /OF0 def
+% TT Name: Arial
+/FontType 3 def
+/FontMatrix [0.001 0 0 -0.001 0 0] def
+/FontBBox [0 -729 769 210] def
+/Encoding 256 array def 0 1 255{Encoding exch/.notdef put}for
+Encoding 32 /s32 put
+Encoding 33 /s33 put
+Encoding 34 /s34 put
+Encoding 35 /s35 put
+Encoding 36 /s36 put
+Encoding 37 /s37 put
+Encoding 38 /s38 put
+Encoding 39 /s39 put
+Encoding 40 /s40 put
+Encoding 41 /s41 put
+Encoding 42 /s42 put
+Encoding 43 /s43 put
+Encoding 44 /s44 put
+Encoding 45 /s45 put
+Encoding 46 /s46 put
+Encoding 47 /s47 put
+Encoding 48 /s48 put
+Encoding 49 /s49 put
+Encoding 50 /s50 put
+Encoding 51 /s51 put
+Encoding 52 /s52 put
+Encoding 53 /s53 put
+Encoding 54 /s54 put
+Encoding 55 /s55 put
+Encoding 56 /s56 put
+Encoding 57 /s57 put
+Encoding 58 /s58 put
+Encoding 59 /s59 put
+Encoding 60 /s60 put
+Encoding 61 /s61 put
+Encoding 62 /s62 put
+Encoding 63 /s63 put
+Encoding 64 /s64 put
+Encoding 65 /s65 put
+/BoundingBoxes 34 dict def
+BoundingBoxes begin
+/s32 [32 -303 302 -215] def
+/s33 [109 -719 373 0] def
+/s34 [91 -100 191 0] def
+/s35 [30 -719 503 0] def
+/s36 [42 -719 508 12] def
+/s37 [41 -719 512 12] def
+/s38 [38 -719 510 12] def
+/s39 [13 -716 508 0] def
+/s40 [0 0 0 0] def
+/s41 [66 -530 487 0] def
+/s42 [33 -530 519 12] def
+/s43 [65 -530 347 0] def
+/s44 [66 -530 769 0] def
+/s45 [36 -530 514 12] def
+/s46 [64 -716 152 0] def
+/s47 [66 -716 154 0] def
+/s48 [20 -519 479 0] def
+/s49 [37 -530 515 12] def
+/s50 [34 -716 484 12] def
+/s51 [61 -728 297 210] def
+/s52 [73 -716 665 0] def
+/s53 [61 -728 297 210] def
+/s54 [31 -530 461 12] def
+/s55 [66 -530 516 199] def
+/s56 [18 -700 271 7] def
+/s57 [53 -728 715 12] def
+/s58 [42 -719 511 13] def
+/s59 [47 -707 511 0] def
+/s60 [3 -716 659 0] def
+/s61 [73 -716 614 0] def
+/s62 [50 -728 683 12] def
+/s63 [48 -729 733 12] def
+/s64 [20 -716 586 0] def
+/s65 [82 -716 565 0] def
+end
+/Metrics 34 dict def
+ Metrics begin
+/s32 333 def
+/s33 556 def
+/s34 278 def
+/s35 556 def
+/s36 556 def
+/s37 556 def
+/s38 556 def
+/s39 556 def
+/s40 278 def
+/s41 556 def
+/s42 556 def
+/s43 333 def
+/s44 833 def
+/s45 556 def
+/s46 222 def
+/s47 222 def
+/s48 500 def
+/s49 556 def
+/s50 556 def
+/s51 333 def
+/s52 667 def
+/s53 333 def
+/s54 500 def
+/s55 556 def
+/s56 278 def
+/s57 778 def
+/s58 556 def
+/s59 556 def
+/s60 667 def
+/s61 667 def
+/s62 722 def
+/s63 778 def
+/s64 611 def
+/s65 611 def
+end
+/CharProcs 34 dict def
+ CharProcs begin
+/.notdef {} def
+/s32 {
+32 -215 moveto
+32 -303 32 -215 32 -303 curveto
+302 -303 32 -303 302 -303 curveto
+302 -215 302 -303 302 -215 curveto
+32 -215 302 -215 32 -215 curveto
+closepath
+} bind def
+/s33 {
+373 0 moveto
+285 0 373 0 285 0 curveto
+285 -560 285 0 285 -560 curveto
+264 -540 236 -520 201 -500 curveto
+167 -479 136 -464 109 -454 curveto
+109 -539 109 -454 109 -539 curveto
+158 -562 201 -590 238 -623 curveto
+275 -656 301 -688 316 -719 curveto
+373 -719 316 -719 373 -719 curveto
+373 0 373 -719 373 0 curveto
+closepath
+} bind def
+/s34 {
+91 0 moveto
+91 -100 91 0 91 -100 curveto
+191 -100 91 -100 191 -100 curveto
+191 0 191 -100 191 0 curveto
+91 0 191 0 91 0 curveto
+closepath
+} bind def
+/s35 {
+503 -84 moveto
+503 0 503 -84 503 0 curveto
+30 0 503 0 30 0 curveto
+30 -21 33 -42 41 -61 curveto
+53 -93 72 -125 98 -156 curveto
+125 -188 163 -224 213 -265 curveto
+291 -328 344 -379 371 -416 curveto
+398 -454 412 -489 412 -522 curveto
+412 -557 400 -586 375 -610 curveto
+350 -634 317 -646 277 -646 curveto
+235 -646 201 -633 176 -608 curveto
+150 -583 138 -547 137 -502 curveto
+47 -512 137 -502 47 -512 curveto
+53 -579 76 -630 117 -666 curveto
+157 -701 211 -719 279 -719 curveto
+348 -719 402 -700 442 -662 curveto
+482 -624 502 -576 502 -520 curveto
+502 -491 497 -463 485 -436 curveto
+473 -408 454 -379 427 -348 curveto
+399 -318 354 -276 291 -222 curveto
+238 -178 204 -148 189 -132 curveto
+174 -116 162 -100 152 -84 curveto
+503 -84 152 -84 503 -84 curveto
+closepath
+} bind def
+/s36 {
+42 -353 moveto
+42 -438 50 -506 68 -557 curveto
+85 -609 111 -649 145 -677 curveto
+180 -705 223 -719 275 -719 curveto
+313 -719 347 -711 376 -696 curveto
+405 -680 429 -658 448 -629 curveto
+467 -600 481 -564 492 -522 curveto
+503 -480 508 -424 508 -353 curveto
+508 -269 500 -201 482 -150 curveto
+465 -98 439 -58 405 -30 curveto
+371 -2 327 12 275 12 curveto
+206 12 152 -13 112 -62 curveto
+65 -122 42 -219 42 -353 curveto
+closepath
+132 -353 moveto
+132 -236 146 -157 173 -118 curveto
+201 -80 235 -60 275 -60 curveto
+315 -60 349 -80 377 -119 curveto
+404 -158 418 -236 418 -353 curveto
+418 -471 404 -549 377 -588 curveto
+349 -627 315 -646 274 -646 curveto
+234 -646 201 -629 177 -595 curveto
+147 -551 132 -471 132 -353 curveto
+closepath
+} bind def
+/s37 {
+177 -388 moveto
+140 -402 113 -421 96 -445 curveto
+78 -470 69 -500 69 -534 curveto
+69 -586 88 -630 125 -666 curveto
+163 -701 213 -719 275 -719 curveto
+337 -719 388 -701 426 -664 curveto
+464 -628 483 -584 483 -532 curveto
+483 -499 474 -470 457 -445 curveto
+439 -420 413 -402 377 -388 curveto
+421 -374 455 -351 478 -319 curveto
+501 -287 512 -249 512 -205 curveto
+512 -143 491 -92 447 -50 curveto
+404 -9 347 12 276 12 curveto
+206 12 149 -9 105 -51 curveto
+62 -92 41 -145 41 -207 curveto
+41 -254 52 -293 76 -324 curveto
+100 -355 133 -377 177 -388 curveto
+closepath
+159 -537 moveto
+159 -503 170 -476 192 -454 curveto
+214 -433 242 -422 277 -422 curveto
+311 -422 338 -433 360 -454 curveto
+382 -475 393 -501 393 -532 curveto
+393 -564 381 -592 359 -614 curveto
+337 -635 309 -646 276 -646 curveto
+242 -646 215 -636 192 -614 curveto
+170 -593 159 -567 159 -537 curveto
+closepath
+131 -207 moveto
+131 -181 137 -157 149 -134 curveto
+161 -110 178 -92 202 -79 curveto
+225 -66 250 -60 277 -60 curveto
+319 -60 354 -74 381 -101 curveto
+409 -128 422 -162 422 -204 curveto
+422 -246 408 -281 380 -309 curveto
+352 -336 317 -350 274 -350 curveto
+233 -350 199 -336 172 -309 curveto
+144 -282 131 -248 131 -207 curveto
+closepath
+} bind def
+/s38 {
+498 -541 moveto
+410 -534 498 -541 410 -534 curveto
+402 -568 391 -593 377 -609 curveto
+353 -634 324 -646 289 -646 curveto
+261 -646 236 -639 215 -623 curveto
+188 -603 166 -573 150 -535 curveto
+134 -496 126 -441 125 -369 curveto
+146 -401 172 -425 203 -441 curveto
+233 -457 265 -464 299 -464 curveto
+357 -464 407 -443 448 -400 curveto
+490 -357 510 -301 510 -232 curveto
+510 -188 501 -146 481 -107 curveto
+462 -69 435 -39 401 -19 curveto
+368 2 329 12 286 12 curveto
+213 12 153 -15 107 -69 curveto
+61 -122 38 -211 38 -335 curveto
+38 -473 63 -574 114 -637 curveto
+159 -691 219 -719 294 -719 curveto
+351 -719 397 -703 433 -671 curveto
+469 -640 490 -596 498 -541 curveto
+closepath
+139 -232 moveto
+139 -202 145 -173 158 -145 curveto
+171 -117 189 -96 212 -82 curveto
+235 -67 259 -60 285 -60 curveto
+322 -60 354 -75 380 -105 curveto
+407 -135 420 -176 420 -227 curveto
+420 -277 407 -316 381 -344 curveto
+354 -372 321 -387 281 -387 curveto
+242 -387 208 -372 180 -344 curveto
+153 -316 139 -278 139 -232 curveto
+closepath
+} bind def
+/s39 {
+323 0 moveto
+323 -171 323 0 323 -171 curveto
+13 -171 323 -171 13 -171 curveto
+13 -252 13 -171 13 -252 curveto
+339 -716 13 -252 339 -716 curveto
+411 -716 339 -716 411 -716 curveto
+411 -252 411 -716 411 -252 curveto
+508 -252 411 -252 508 -252 curveto
+508 -171 508 -252 508 -171 curveto
+411 -171 508 -171 411 -171 curveto
+411 0 411 -171 411 0 curveto
+323 0 411 0 323 0 curveto
+closepath
+323 -252 moveto
+323 -575 323 -252 323 -575 curveto
+99 -252 323 -575 99 -252 curveto
+323 -252 99 -252 323 -252 curveto
+closepath
+} bind def
+/s41 {
+66 0 moveto
+66 -519 66 0 66 -519 curveto
+145 -519 66 -519 145 -519 curveto
+145 -445 145 -519 145 -445 curveto
+183 -502 238 -530 310 -530 curveto
+341 -530 370 -525 396 -513 curveto
+422 -502 442 -487 455 -469 curveto
+468 -451 477 -429 482 -404 curveto
+486 -388 487 -360 487 -319 curveto
+487 0 487 -319 487 0 curveto
+399 0 487 0 399 0 curveto
+399 -315 399 0 399 -315 curveto
+399 -351 396 -378 389 -396 curveto
+382 -413 370 -428 353 -438 curveto
+335 -449 315 -454 292 -454 curveto
+254 -454 222 -442 195 -418 curveto
+167 -395 154 -350 154 -283 curveto
+154 0 154 -283 154 0 curveto
+66 0 154 0 66 0 curveto
+closepath
+} bind def
+/s42 {
+33 -259 moveto
+33 -355 60 -426 113 -473 curveto
+158 -511 212 -530 276 -530 curveto
+348 -530 406 -507 451 -460 curveto
+496 -413 519 -349 519 -267 curveto
+519 -200 509 -147 489 -109 curveto
+469 -71 440 -41 402 -20 curveto
+363 1 322 12 276 12 curveto
+204 12 145 -12 100 -58 curveto
+56 -105 33 -172 33 -259 curveto
+closepath
+124 -259 moveto
+124 -193 138 -143 167 -110 curveto
+196 -77 232 -61 276 -61 curveto
+320 -61 356 -77 385 -110 curveto
+414 -144 429 -194 429 -262 curveto
+429 -326 414 -375 385 -408 curveto
+356 -441 320 -458 276 -458 curveto
+232 -458 196 -441 167 -408 curveto
+138 -375 124 -326 124 -259 curveto
+closepath
+} bind def
+/s43 {
+65 0 moveto
+65 -519 65 0 65 -519 curveto
+144 -519 65 -519 144 -519 curveto
+144 -440 144 -519 144 -440 curveto
+164 -477 183 -501 200 -513 curveto
+217 -524 236 -530 256 -530 curveto
+286 -530 316 -521 347 -502 curveto
+316 -420 347 -502 316 -420 curveto
+295 -433 273 -439 252 -439 curveto
+233 -439 215 -434 200 -422 curveto
+185 -411 174 -395 167 -374 curveto
+158 -343 153 -309 153 -271 curveto
+153 0 153 -271 153 0 curveto
+65 0 153 0 65 0 curveto
+closepath
+} bind def
+/s44 {
+66 0 moveto
+66 -519 66 0 66 -519 curveto
+145 -519 66 -519 145 -519 curveto
+145 -446 145 -519 145 -446 curveto
+161 -471 182 -492 209 -507 curveto
+236 -523 267 -530 302 -530 curveto
+340 -530 372 -522 396 -506 curveto
+421 -490 438 -468 448 -439 curveto
+489 -500 543 -530 608 -530 curveto
+660 -530 699 -516 727 -488 curveto
+755 -459 769 -415 769 -356 curveto
+769 0 769 -356 769 0 curveto
+681 0 769 0 681 0 curveto
+681 -327 681 0 681 -327 curveto
+681 -362 678 -387 673 -403 curveto
+667 -418 657 -431 642 -440 curveto
+627 -449 609 -454 589 -454 curveto
+552 -454 522 -442 498 -418 curveto
+474 -393 462 -355 462 -301 curveto
+462 0 462 -301 462 0 curveto
+374 0 462 0 374 0 curveto
+374 -337 374 0 374 -337 curveto
+374 -376 367 -405 353 -425 curveto
+338 -444 315 -454 282 -454 curveto
+257 -454 235 -448 214 -435 curveto
+193 -422 177 -403 168 -377 curveto
+159 -352 154 -316 154 -269 curveto
+154 0 154 -269 154 0 curveto
+66 0 154 0 66 0 curveto
+closepath
+} bind def
+/s45 {
+404 -64 moveto
+372 -36 340 -17 310 -5 curveto
+280 6 248 12 213 12 curveto
+156 12 113 -2 82 -30 curveto
+51 -58 36 -93 36 -137 curveto
+36 -162 42 -185 53 -206 curveto
+65 -227 80 -244 99 -257 curveto
+118 -270 139 -279 162 -286 curveto
+179 -290 205 -295 240 -299 curveto
+311 -307 363 -317 397 -329 curveto
+397 -341 397 -349 397 -352 curveto
+397 -388 389 -413 373 -428 curveto
+350 -448 317 -458 272 -458 curveto
+231 -458 201 -450 181 -436 curveto
+161 -421 147 -396 137 -359 curveto
+51 -371 137 -359 51 -371 curveto
+59 -407 72 -437 90 -460 curveto
+108 -482 134 -500 167 -512 curveto
+201 -524 241 -530 285 -530 curveto
+329 -530 365 -525 393 -515 curveto
+421 -504 441 -491 454 -475 curveto
+467 -460 476 -440 481 -416 curveto
+484 -401 486 -374 486 -334 curveto
+486 -217 486 -334 486 -217 curveto
+486 -136 488 -84 491 -62 curveto
+495 -41 503 -20 514 0 curveto
+422 0 514 0 422 0 curveto
+413 -18 407 -40 404 -64 curveto
+closepath
+397 -260 moveto
+365 -247 317 -236 253 -227 curveto
+217 -222 192 -216 177 -209 curveto
+162 -203 150 -193 142 -181 curveto
+134 -168 130 -154 130 -139 curveto
+130 -116 139 -96 156 -81 curveto
+174 -65 200 -57 234 -57 curveto
+268 -57 298 -65 325 -79 curveto
+351 -94 370 -114 383 -140 curveto
+392 -160 397 -189 397 -228 curveto
+397 -260 397 -228 397 -260 curveto
+closepath
+} bind def
+/s46 {
+64 0 moveto
+64 -716 64 0 64 -716 curveto
+152 -716 64 -716 152 -716 curveto
+152 0 152 -716 152 0 curveto
+64 0 152 0 64 0 curveto
+closepath
+} bind def
+/s47 {
+66 -615 moveto
+66 -716 66 -615 66 -716 curveto
+154 -716 66 -716 154 -716 curveto
+154 -615 154 -716 154 -615 curveto
+66 -615 154 -615 66 -615 curveto
+closepath
+66 0 moveto
+66 -519 66 0 66 -519 curveto
+154 -519 66 -519 154 -519 curveto
+154 0 154 -519 154 0 curveto
+66 0 154 0 66 0 curveto
+closepath
+} bind def
+/s48 {
+20 0 moveto
+20 -71 20 0 20 -71 curveto
+350 -450 20 -71 350 -450 curveto
+312 -448 279 -447 250 -447 curveto
+39 -447 250 -447 39 -447 curveto
+39 -519 39 -447 39 -519 curveto
+463 -519 39 -519 463 -519 curveto
+463 -460 463 -519 463 -460 curveto
+182 -131 463 -460 182 -131 curveto
+128 -71 182 -131 128 -71 curveto
+167 -74 204 -76 239 -76 curveto
+479 -76 239 -76 479 -76 curveto
+479 0 479 -76 479 0 curveto
+20 0 479 0 20 0 curveto
+closepath
+} bind def
+/s49 {
+421 -167 moveto
+512 -156 421 -167 512 -156 curveto
+497 -103 471 -62 432 -32 curveto
+393 -3 344 12 284 12 curveto
+208 12 148 -12 103 -58 curveto
+59 -105 37 -171 37 -255 curveto
+37 -342 59 -410 104 -458 curveto
+149 -506 207 -530 279 -530 curveto
+348 -530 405 -507 449 -459 curveto
+493 -412 515 -346 515 -260 curveto
+515 -255 514 -247 514 -237 curveto
+127 -237 514 -237 127 -237 curveto
+131 -180 147 -136 176 -106 curveto
+205 -76 241 -61 284 -61 curveto
+316 -61 344 -69 367 -86 curveto
+389 -103 408 -130 421 -167 curveto
+closepath
+132 -309 moveto
+422 -309 132 -309 422 -309 curveto
+418 -353 407 -385 389 -407 curveto
+361 -441 324 -458 280 -458 curveto
+239 -458 205 -444 178 -417 curveto
+150 -390 135 -354 132 -309 curveto
+closepath
+} bind def
+/s50 {
+402 0 moveto
+402 -65 402 0 402 -65 curveto
+369 -14 321 12 257 12 curveto
+216 12 178 0 143 -22 curveto
+109 -45 82 -77 63 -118 curveto
+44 -159 34 -206 34 -259 curveto
+34 -311 43 -358 60 -400 curveto
+77 -442 103 -474 138 -497 curveto
+172 -519 211 -530 253 -530 curveto
+285 -530 312 -524 337 -510 curveto
+361 -497 381 -480 396 -459 curveto
+396 -716 396 -459 396 -716 curveto
+484 -716 396 -716 484 -716 curveto
+484 0 484 -716 484 0 curveto
+402 0 484 0 402 0 curveto
+closepath
+125 -259 moveto
+125 -192 139 -143 167 -110 curveto
+194 -77 228 -61 266 -61 curveto
+304 -61 337 -76 364 -108 curveto
+390 -139 404 -187 404 -251 curveto
+404 -322 390 -375 363 -408 curveto
+335 -441 302 -458 262 -458 curveto
+223 -458 190 -442 164 -410 curveto
+138 -378 125 -327 125 -259 curveto
+closepath
+} bind def
+/s51 {
+234 210 moveto
+185 149 144 78 111 -4 curveto
+77 -86 61 -171 61 -259 curveto
+61 -337 73 -411 98 -482 curveto
+127 -564 173 -646 234 -728 curveto
+297 -728 234 -728 297 -728 curveto
+257 -660 231 -612 219 -583 curveto
+199 -538 183 -491 172 -442 curveto
+158 -382 151 -320 151 -259 curveto
+151 -102 200 54 297 210 curveto
+234 210 297 210 234 210 curveto
+closepath
+} bind def
+/s52 {
+73 0 moveto
+73 -716 73 0 73 -716 curveto
+168 -716 73 -716 168 -716 curveto
+168 -361 168 -716 168 -361 curveto
+523 -716 168 -361 523 -716 curveto
+652 -716 523 -716 652 -716 curveto
+352 -426 652 -716 352 -426 curveto
+665 0 352 -426 665 0 curveto
+540 0 665 0 540 0 curveto
+285 -362 540 0 285 -362 curveto
+168 -248 285 -362 168 -248 curveto
+168 0 168 -248 168 0 curveto
+73 0 168 0 73 0 curveto
+closepath
+} bind def
+/s53 {
+124 210 moveto
+61 210 124 210 61 210 curveto
+158 54 207 -102 207 -259 curveto
+207 -320 200 -381 186 -441 curveto
+174 -490 159 -537 139 -582 curveto
+126 -611 100 -660 61 -728 curveto
+124 -728 61 -728 124 -728 curveto
+185 -646 230 -564 259 -482 curveto
+284 -411 297 -337 297 -259 curveto
+297 -171 280 -86 246 -4 curveto
+213 78 172 149 124 210 curveto
+closepath
+} bind def
+/s54 {
+31 -155 moveto
+118 -168 31 -155 118 -168 curveto
+123 -134 136 -107 158 -88 curveto
+181 -70 212 -61 252 -61 curveto
+292 -61 322 -69 342 -85 curveto
+361 -102 371 -121 371 -143 curveto
+371 -163 362 -179 345 -190 curveto
+333 -198 303 -208 255 -220 curveto
+191 -236 146 -250 121 -262 curveto
+96 -274 78 -290 65 -311 curveto
+52 -332 45 -355 45 -381 curveto
+45 -404 51 -425 61 -445 curveto
+72 -465 86 -481 104 -494 curveto
+118 -504 137 -513 160 -520 curveto
+184 -527 209 -530 236 -530 curveto
+277 -530 313 -524 344 -513 curveto
+374 -501 397 -485 412 -465 curveto
+426 -445 436 -418 442 -385 curveto
+356 -373 442 -385 356 -373 curveto
+352 -400 341 -421 322 -436 curveto
+303 -451 277 -458 243 -458 curveto
+202 -458 174 -451 156 -438 curveto
+139 -425 130 -409 130 -391 curveto
+130 -380 134 -369 141 -360 curveto
+148 -351 160 -343 175 -337 curveto
+184 -334 209 -326 252 -314 curveto
+315 -298 358 -284 383 -274 curveto
+407 -263 426 -248 440 -228 curveto
+454 -207 461 -182 461 -152 curveto
+461 -123 453 -95 436 -70 curveto
+419 -44 394 -24 362 -10 curveto
+330 5 293 12 252 12 curveto
+185 12 134 -2 98 -30 curveto
+63 -58 41 -100 31 -155 curveto
+closepath
+} bind def
+/s55 {
+66 199 moveto
+66 -519 66 199 66 -519 curveto
+146 -519 66 -519 146 -519 curveto
+146 -451 146 -519 146 -451 curveto
+165 -478 186 -497 210 -510 curveto
+234 -524 263 -530 296 -530 curveto
+341 -530 380 -519 414 -496 curveto
+447 -473 473 -441 490 -400 curveto
+507 -358 516 -313 516 -263 curveto
+516 -210 507 -162 488 -120 curveto
+469 -77 441 -45 405 -22 curveto
+368 0 330 12 290 12 curveto
+261 12 234 6 211 -7 curveto
+188 -19 169 -35 154 -54 curveto
+154 199 154 -54 154 199 curveto
+66 199 154 199 66 199 curveto
+closepath
+146 -256 moveto
+146 -190 159 -140 186 -108 curveto
+213 -76 246 -61 284 -61 curveto
+323 -61 357 -77 385 -110 curveto
+412 -143 426 -194 426 -264 curveto
+426 -330 413 -379 385 -412 curveto
+358 -445 326 -461 288 -461 curveto
+251 -461 218 -444 189 -409 curveto
+160 -374 146 -323 146 -256 curveto
+closepath
+} bind def
+/s56 {
+258 -79 moveto
+271 -1 258 -79 271 -1 curveto
+246 4 224 7 204 7 curveto
+172 7 147 2 130 -8 curveto
+112 -18 100 -32 93 -48 curveto
+86 -65 82 -99 82 -152 curveto
+82 -450 82 -152 82 -450 curveto
+18 -450 82 -450 18 -450 curveto
+18 -519 18 -450 18 -519 curveto
+82 -519 18 -519 82 -519 curveto
+82 -647 82 -519 82 -647 curveto
+169 -700 82 -647 169 -700 curveto
+169 -519 169 -700 169 -519 curveto
+258 -519 169 -519 258 -519 curveto
+258 -450 258 -519 258 -450 curveto
+169 -450 258 -450 169 -450 curveto
+169 -147 169 -450 169 -147 curveto
+169 -122 171 -106 174 -99 curveto
+177 -91 182 -86 189 -82 curveto
+196 -77 206 -75 219 -75 curveto
+229 -75 242 -76 258 -79 curveto
+closepath
+} bind def
+/s57 {
+412 -281 moveto
+412 -365 412 -281 412 -365 curveto
+715 -365 412 -365 715 -365 curveto
+715 -100 715 -365 715 -100 curveto
+669 -62 621 -35 571 -16 curveto
+522 3 471 12 419 12 curveto
+349 12 285 -3 227 -33 curveto
+170 -63 126 -107 97 -164 curveto
+68 -221 53 -284 53 -354 curveto
+53 -424 68 -489 97 -550 curveto
+126 -610 168 -655 223 -684 curveto
+277 -713 340 -728 412 -728 curveto
+463 -728 510 -720 552 -703 curveto
+594 -686 627 -663 650 -633 curveto
+674 -603 692 -564 705 -516 curveto
+619 -492 705 -516 619 -492 curveto
+608 -529 595 -557 579 -578 curveto
+563 -599 540 -616 511 -628 curveto
+481 -641 448 -647 412 -647 curveto
+369 -647 331 -640 300 -627 curveto
+268 -614 243 -597 223 -575 curveto
+204 -554 189 -530 178 -504 curveto
+160 -460 151 -412 151 -360 curveto
+151 -297 162 -243 184 -200 curveto
+206 -157 238 -125 280 -104 curveto
+322 -84 366 -73 414 -73 curveto
+455 -73 495 -81 534 -97 curveto
+573 -113 602 -130 623 -147 curveto
+623 -281 623 -147 623 -281 curveto
+412 -281 623 -281 412 -281 curveto
+closepath
+} bind def
+/s58 {
+42 -189 moveto
+130 -201 42 -189 130 -201 curveto
+140 -151 157 -115 181 -93 curveto
+206 -71 235 -60 270 -60 curveto
+311 -60 346 -74 375 -103 curveto
+403 -132 417 -167 417 -209 curveto
+417 -250 404 -283 378 -309 curveto
+352 -336 318 -349 277 -349 curveto
+261 -349 240 -345 215 -339 curveto
+225 -416 215 -339 225 -416 curveto
+231 -415 236 -415 239 -415 curveto
+277 -415 310 -425 340 -444 curveto
+370 -464 385 -494 385 -535 curveto
+385 -567 374 -594 353 -615 curveto
+331 -636 303 -646 268 -646 curveto
+234 -646 205 -636 183 -614 curveto
+160 -593 145 -561 139 -518 curveto
+51 -533 139 -518 51 -533 curveto
+62 -592 86 -638 124 -670 curveto
+162 -703 209 -719 266 -719 curveto
+305 -719 341 -710 374 -694 curveto
+407 -677 432 -654 449 -625 curveto
+467 -596 476 -565 476 -533 curveto
+476 -502 467 -474 451 -448 curveto
+434 -423 410 -403 377 -388 curveto
+419 -378 452 -358 476 -327 curveto
+499 -296 511 -258 511 -211 curveto
+511 -149 488 -96 442 -52 curveto
+397 -9 339 13 270 13 curveto
+207 13 155 -6 113 -43 curveto
+72 -81 48 -129 42 -189 curveto
+closepath
+} bind def
+/s59 {
+47 -622 moveto
+47 -707 47 -622 47 -707 curveto
+511 -707 47 -707 511 -707 curveto
+511 -638 511 -707 511 -638 curveto
+465 -590 420 -525 375 -445 curveto
+330 -364 296 -282 271 -197 curveto
+254 -137 243 -71 238 0 curveto
+147 0 238 0 147 0 curveto
+148 -56 160 -124 181 -204 curveto
+202 -284 232 -361 272 -435 curveto
+311 -509 353 -571 398 -622 curveto
+47 -622 398 -622 47 -622 curveto
+closepath
+} bind def
+/s60 {
+279 0 moveto
+279 -303 279 0 279 -303 curveto
+3 -716 279 -303 3 -716 curveto
+118 -716 3 -716 118 -716 curveto
+259 -500 118 -716 259 -500 curveto
+285 -460 310 -419 332 -379 curveto
+354 -416 380 -458 410 -505 curveto
+549 -716 410 -505 549 -716 curveto
+659 -716 549 -716 659 -716 curveto
+374 -303 659 -716 374 -303 curveto
+374 0 374 -303 374 0 curveto
+279 0 374 0 279 0 curveto
+closepath
+} bind def
+/s61 {
+73 0 moveto
+73 -716 73 0 73 -716 curveto
+342 -716 73 -716 342 -716 curveto
+396 -716 440 -709 473 -694 curveto
+506 -680 532 -657 551 -627 curveto
+570 -597 579 -566 579 -533 curveto
+579 -502 571 -473 554 -446 curveto
+538 -419 513 -397 479 -381 curveto
+522 -368 556 -347 579 -316 curveto
+602 -285 614 -249 614 -208 curveto
+614 -174 607 -143 593 -114 curveto
+578 -85 561 -63 540 -47 curveto
+519 -32 493 -20 462 -12 curveto
+430 -4 392 0 346 0 curveto
+73 0 346 0 73 0 curveto
+closepath
+168 -415 moveto
+323 -415 168 -415 323 -415 curveto
+365 -415 395 -418 413 -423 curveto
+437 -431 455 -442 468 -459 curveto
+480 -476 486 -496 486 -521 curveto
+486 -545 480 -566 469 -584 curveto
+457 -602 441 -615 420 -621 curveto
+399 -628 362 -631 311 -631 curveto
+168 -631 311 -631 168 -631 curveto
+168 -415 168 -631 168 -415 curveto
+closepath
+168 -84 moveto
+346 -84 168 -84 346 -84 curveto
+377 -84 398 -86 411 -88 curveto
+432 -92 451 -98 465 -107 curveto
+480 -117 492 -130 501 -147 curveto
+511 -165 516 -185 516 -208 curveto
+516 -234 509 -257 495 -277 curveto
+481 -297 462 -311 438 -319 curveto
+414 -327 379 -331 333 -331 curveto
+168 -331 333 -331 168 -331 curveto
+168 -84 168 -331 168 -84 curveto
+closepath
+} bind def
+/s62 {
+588 -251 moveto
+683 -227 588 -251 683 -227 curveto
+663 -149 627 -90 575 -49 curveto
+524 -8 461 12 386 12 curveto
+309 12 246 -3 198 -35 curveto
+150 -66 113 -112 88 -171 curveto
+62 -231 50 -295 50 -363 curveto
+50 -438 64 -503 93 -558 curveto
+121 -614 162 -656 214 -685 curveto
+267 -714 325 -728 388 -728 curveto
+459 -728 520 -710 568 -673 curveto
+617 -637 651 -586 670 -520 curveto
+577 -498 670 -520 577 -498 curveto
+561 -550 536 -588 505 -611 curveto
+473 -635 434 -647 386 -647 curveto
+331 -647 285 -634 248 -607 curveto
+211 -581 185 -546 170 -501 curveto
+155 -457 147 -411 147 -364 curveto
+147 -303 156 -250 174 -204 curveto
+192 -159 219 -125 257 -103 curveto
+294 -80 335 -69 378 -69 curveto
+431 -69 476 -84 513 -115 curveto
+550 -145 575 -191 588 -251 curveto
+closepath
+} bind def
+/s63 {
+48 -349 moveto
+48 -467 80 -560 144 -628 curveto
+208 -695 290 -729 391 -729 curveto
+457 -729 517 -713 570 -681 curveto
+623 -650 663 -606 691 -549 curveto
+719 -493 733 -429 733 -357 curveto
+733 -284 718 -219 689 -162 curveto
+660 -105 618 -61 564 -32 curveto
+511 -3 453 12 391 12 curveto
+323 12 263 -4 210 -37 curveto
+157 -69 117 -114 89 -170 curveto
+62 -226 48 -286 48 -349 curveto
+closepath
+146 -347 moveto
+146 -261 169 -193 216 -143 curveto
+262 -94 320 -69 390 -69 curveto
+461 -69 520 -94 566 -144 curveto
+612 -194 635 -265 635 -357 curveto
+635 -416 625 -467 606 -510 curveto
+586 -553 557 -587 519 -611 curveto
+481 -635 439 -647 392 -647 curveto
+325 -647 267 -624 219 -578 curveto
+170 -532 146 -455 146 -347 curveto
+closepath
+} bind def
+/s64 {
+20 0 moveto
+20 -88 20 0 20 -88 curveto
+387 -546 20 -88 387 -546 curveto
+413 -579 438 -607 461 -631 curveto
+62 -631 461 -631 62 -631 curveto
+62 -716 62 -631 62 -716 curveto
+574 -716 62 -716 574 -716 curveto
+574 -631 574 -716 574 -631 curveto
+172 -135 574 -631 172 -135 curveto
+129 -84 172 -135 129 -84 curveto
+586 -84 129 -84 586 -84 curveto
+586 0 586 -84 586 0 curveto
+20 0 586 0 20 0 curveto
+closepath
+} bind def
+/s65 {
+82 0 moveto
+82 -716 82 0 82 -716 curveto
+565 -716 82 -716 565 -716 curveto
+565 -631 565 -716 565 -631 curveto
+177 -631 565 -631 177 -631 curveto
+177 -410 177 -631 177 -410 curveto
+513 -410 177 -410 513 -410 curveto
+513 -325 513 -410 513 -325 curveto
+177 -325 513 -325 177 -325 curveto
+177 0 177 -325 177 0 curveto
+82 0 177 0 82 0 curveto
+closepath
+} bind def
+end
+/BuildGlyph { exch begin dup Metrics exch get 0 2 index BoundingBoxes exch get aload pop setcachedevice CharProcs exch 2 copy known not{pop/.notdef}if get exec fill end } def
+/BuildChar { 1 index /Encoding get exch get 1 index /BuildGlyph get exec } bind def
+currentdict end /OF0 exch definefont pop
+%%EndFont
+%%BeginFont: /OF1
+11 dict begin
+/FontName /OF1 def
+% TT Name: Arial
+/FontType 3 def
+/FontMatrix [0.001 0 0 -0.001 0 0] def
+/FontBBox [44 -716 872 0] def
+/Encoding 256 array def 0 1 255{Encoding exch/.notdef put}for
+Encoding 32 /s32 put
+Encoding 33 /s33 put
+/BoundingBoxes 2 dict def
+BoundingBoxes begin
+/s32 [44 -716 872 0] def
+/s33 [125 -716 705 0] def
+end
+/Metrics 2 dict def
+ Metrics begin
+/s32 833 def
+/s33 611 def
+end
+/CharProcs 2 dict def
+ CharProcs begin
+/.notdef {} def
+/s32 {
+44 0 moveto
+193 -716 44 0 193 -716 curveto
+311 -716 193 -716 311 -716 curveto
+383 -252 311 -716 383 -252 curveto
+393 -191 399 -133 402 -77 curveto
+422 -125 455 -190 501 -272 curveto
+752 -716 501 -272 752 -716 curveto
+872 -716 752 -716 872 -716 curveto
+723 0 872 -716 723 0 curveto
+628 0 723 0 628 0 curveto
+703 -348 628 0 703 -348 curveto
+720 -429 745 -519 777 -619 curveto
+757 -572 731 -522 701 -468 curveto
+435 0 701 -468 435 0 curveto
+342 0 435 0 342 0 curveto
+271 -459 342 0 271 -459 curveto
+264 -501 259 -550 256 -606 curveto
+248 -543 240 -493 232 -457 curveto
+137 0 232 -457 137 0 curveto
+44 0 137 0 44 0 curveto
+closepath
+} bind def
+/s33 {
+227 0 moveto
+359 -634 227 0 359 -634 curveto
+125 -634 359 -634 125 -634 curveto
+142 -716 125 -634 142 -716 curveto
+705 -716 142 -716 705 -716 curveto
+688 -634 705 -716 688 -634 curveto
+455 -634 688 -634 455 -634 curveto
+323 0 455 -634 323 0 curveto
+227 0 323 0 227 0 curveto
+closepath
+} bind def
+end
+/BuildGlyph { exch begin dup Metrics exch get 0 2 index BoundingBoxes exch get aload pop setcachedevice CharProcs exch 2 copy known not{pop/.notdef}if get exec fill end } def
+/BuildChar { 1 index /Encoding get exch get 1 index /BuildGlyph get exec } bind def
+currentdict end /OF1 exch definefont pop
+%%EndFont
+0 186 translate  1 -1 scale
+/AnObj save def
+1 1 1 SetBack   0 0 0 SetFore  UseFore
+0 0 translate
+gsave
+0.000 0.000 0.000 setrgbcolor
+gsave 1.00 ps [ ] sd newpath 45.12 11.12 M 45.12 152.88 L mstroke grestore
+gsave 1.00 ps [ ] sd newpath 243.50 11.12 M 243.50 152.88 L mstroke grestore
+gsave 1.00 ps [ ] sd newpath 244.00 152.88 M 240.00 152.88 L mstroke grestore
+gsave 1.00 ps [ ] sd newpath 44.62 152.88 M 48.62 152.88 L mstroke grestore
+gsave
+[1.00 0.00 0.00 1.00 26.00 147.38] concat
+10.00 (OF0) 0 F
+( !"#) 0.00 9.00 17.12 WS
+grestore
+gsave 1.00 ps [ ] sd newpath 244.00 131.12 M 240.00 131.12 L mstroke grestore
+gsave 1.00 ps [ ] sd newpath 44.62 131.12 M 48.62 131.12 L mstroke grestore
+gsave
+[1.00 0.00 0.00 1.00 26.00 125.62] concat
+10.00 (OF0) 0 F
+( !"$) 0.00 9.00 17.12 WS
+grestore
+gsave 1.00 ps [ ] sd newpath 244.00 109.25 M 240.00 109.25 L mstroke grestore
+gsave 1.00 ps [ ] sd newpath 44.62 109.25 M 48.62 109.25 L mstroke grestore
+gsave
+[1.00 0.00 0.00 1.00 26.00 103.75] concat
+10.00 (OF0) 0 F
+( $"%) 0.00 9.00 17.12 WS
+grestore
+gsave 1.00 ps [ ] sd newpath 244.00 87.50 M 240.00 87.50 L mstroke grestore
+gsave 1.00 ps [ ] sd newpath 44.62 87.50 M 48.62 87.50 L mstroke grestore
+gsave
+[1.00 0.00 0.00 1.00 26.00 82.00] concat
+10.00 (OF0) 0 F
+( $"&) 0.00 9.00 17.12 WS
+grestore
+gsave 1.00 ps [ ] sd newpath 244.00 65.62 M 240.00 65.62 L mstroke grestore
+gsave 1.00 ps [ ] sd newpath 44.62 65.62 M 48.62 65.62 L mstroke grestore
+gsave
+[1.00 0.00 0.00 1.00 26.00 60.12] concat
+10.00 (OF0) 0 F
+( $"') 0.00 9.00 17.12 WS
+grestore
+gsave 1.00 ps [ ] sd newpath 244.00 43.88 M 240.00 43.88 L mstroke grestore
+gsave 1.00 ps [ ] sd newpath 44.62 43.88 M 48.62 43.88 L mstroke grestore
+gsave
+[1.00 0.00 0.00 1.00 26.00 38.38] concat
+10.00 (OF0) 0 F
+( $"#) 0.00 9.00 17.12 WS
+grestore
+gsave 1.00 ps [ ] sd newpath 244.00 22.00 M 240.00 22.00 L mstroke grestore
+gsave 1.00 ps [ ] sd newpath 44.62 22.00 M 48.62 22.00 L mstroke grestore
+gsave
+[1.00 0.00 0.00 1.00 37.62 16.50] concat
+10.00 (OF0) 0 F
+($) 0.00 9.00 5.50 WS
+grestore
+gsave 1.00 ps [ ] sd newpath 45.12 22.00 M 243.50 22.00 L mstroke grestore
+gsave
+[0.00 -1.00 1.00 0.00 -0.00 111.88] concat
+10.00 (OF1) 2 F
+( ) 0.00 9.00 8.38 WS
+10.00 (OF0) 0 F
+(\(\)*+,-./012) 8.38 9.00 51.38 WS
+grestore
+gsave 1.00 ps [ ] sd newpath 45.12 152.88 M 243.50 152.88 L mstroke grestore
+gsave 1.00 ps [ ] sd newpath 45.12 11.12 M 243.50 11.12 L mstroke grestore
+gsave 1.00 ps [ ] sd newpath 243.50 10.62 M 243.50 14.62 L mstroke grestore
+gsave 1.00 ps [ ] sd newpath 243.50 153.38 M 243.50 149.38 L mstroke grestore
+gsave
+[1.00 0.00 0.00 1.00 235.25 155.38] concat
+10.00 (OF0) 0 F
+(!$$) 0.00 9.00 16.50 WS
+grestore
+gsave 1.00 ps [ ] sd newpath 203.88 10.62 M 203.88 14.62 L mstroke grestore
+gsave 1.00 ps [ ] sd newpath 203.88 153.38 M 203.88 149.38 L mstroke grestore
+gsave
+[1.00 0.00 0.00 1.00 198.38 155.38] concat
+10.00 (OF0) 0 F
+(%$) 0.00 9.00 11.00 WS
+grestore
+gsave 1.00 ps [ ] sd newpath 164.12 10.62 M 164.12 14.62 L mstroke grestore
+gsave 1.00 ps [ ] sd newpath 164.12 153.38 M 164.12 149.38 L mstroke grestore
+gsave
+[1.00 0.00 0.00 1.00 158.62 155.38] concat
+10.00 (OF0) 0 F
+(&$) 0.00 9.00 11.00 WS
+grestore
+gsave 1.00 ps [ ] sd newpath 124.50 10.62 M 124.50 14.62 L mstroke grestore
+gsave 1.00 ps [ ] sd newpath 124.50 153.38 M 124.50 149.38 L mstroke grestore
+gsave
+[1.00 0.00 0.00 1.00 119.00 155.38] concat
+10.00 (OF0) 0 F
+('$) 0.00 9.00 11.00 WS
+grestore
+gsave 1.00 ps [ ] sd newpath 84.75 10.62 M 84.75 14.62 L mstroke grestore
+gsave 1.00 ps [ ] sd newpath 84.75 153.38 M 84.75 149.38 L mstroke grestore
+gsave
+[1.00 0.00 0.00 1.00 79.25 155.38] concat
+10.00 (OF0) 0 F
+(#$) 0.00 9.00 11.00 WS
+grestore
+gsave 1.00 ps [ ] sd newpath 45.12 10.62 M 45.12 14.62 L mstroke grestore
+gsave 1.00 ps [ ] sd newpath 45.12 153.38 M 45.12 149.38 L mstroke grestore
+gsave
+[1.00 0.00 0.00 1.00 42.38 155.38] concat
+10.00 (OF0) 0 F
+($) 0.00 9.00 5.50 WS
+grestore
+gsave
+[1.00 0.00 0.00 1.00 133.12 173.00] concat
+10.00 (OF1) 2 F
+(!) 0.00 9.00 6.12 WS
+10.00 (OF0) 0 F
+(\(345) 6.12 9.00 16.12 WS
+grestore
+grestore
+gsave
+[ ] sd
+newpath 49.12 131.12 M
+53.00 130.62 L
+57.00 130.50 L
+61.00 130.38 L
+65.00 130.38 L
+68.88 130.50 L
+72.88 130.25 L
+76.88 130.50 L
+80.88 130.38 L
+84.75 130.50 L
+88.75 130.25 L
+92.75 130.25 L
+96.75 130.38 L
+100.62 130.25 L
+104.62 130.12 L
+108.62 129.88 L
+112.62 129.75 L
+116.50 129.88 L
+120.50 130.00 L
+124.50 129.75 L
+128.50 129.62 L
+132.38 129.38 L
+136.38 129.38 L
+140.38 129.25 L
+144.38 129.12 L
+148.38 129.12 L
+152.38 128.88 L
+156.38 128.88 L
+160.38 128.75 L
+164.25 128.88 L
+168.25 128.75 L
+172.25 128.62 L
+176.12 128.50 L
+180.25 128.38 L
+184.12 128.12 L
+188.12 128.12 L
+192.12 128.00 L
+196.00 127.62 L
+200.12 125.62 L
+204.00 107.75 L
+208.00 94.12 L
+212.00 79.50 L
+215.88 29.75 L
+219.88 22.12 L
+223.88 21.88 L
+227.88 22.25 L
+231.88 22.00 L
+235.88 22.00 L
+239.75 22.25 L
+1.000 0.000 0.000 setrgbcolor
+2 setlinejoin
+gsave 1.00 ps mstroke grestore
+grestore
+newpath 47.38 129.38 M
+50.88 129.38 L
+50.88 132.88 L
+47.38 132.88 L
+closepath
+1.000 0.000 0.000 setrgbcolor
+gsave fill grestore
+0.50 ps
+mstroke
+newpath 51.25 128.88 M
+54.75 128.88 L
+54.75 132.38 L
+51.25 132.38 L
+closepath
+gsave fill grestore
+mstroke
+newpath 55.25 128.75 M
+58.75 128.75 L
+58.75 132.25 L
+55.25 132.25 L
+closepath
+gsave fill grestore
+mstroke
+newpath 59.25 128.62 M
+62.75 128.62 L
+62.75 132.12 L
+59.25 132.12 L
+closepath
+gsave fill grestore
+mstroke
+newpath 63.25 128.62 M
+66.75 128.62 L
+66.75 132.12 L
+63.25 132.12 L
+closepath
+gsave fill grestore
+mstroke
+newpath 67.12 128.75 M
+70.62 128.75 L
+70.62 132.25 L
+67.12 132.25 L
+closepath
+gsave fill grestore
+mstroke
+newpath 71.12 128.50 M
+74.62 128.50 L
+74.62 132.00 L
+71.12 132.00 L
+closepath
+gsave fill grestore
+mstroke
+newpath 75.12 128.75 M
+78.62 128.75 L
+78.62 132.25 L
+75.12 132.25 L
+closepath
+gsave fill grestore
+mstroke
+newpath 79.12 128.62 M
+82.62 128.62 L
+82.62 132.12 L
+79.12 132.12 L
+closepath
+gsave fill grestore
+mstroke
+newpath 83.00 128.75 M
+86.50 128.75 L
+86.50 132.25 L
+83.00 132.25 L
+closepath
+gsave fill grestore
+mstroke
+newpath 87.00 128.50 M
+90.50 128.50 L
+90.50 132.00 L
+87.00 132.00 L
+closepath
+gsave fill grestore
+mstroke
+newpath 91.00 128.50 M
+94.50 128.50 L
+94.50 132.00 L
+91.00 132.00 L
+closepath
+gsave fill grestore
+mstroke
+newpath 95.00 128.62 M
+98.50 128.62 L
+98.50 132.12 L
+95.00 132.12 L
+closepath
+gsave fill grestore
+mstroke
+newpath 98.88 128.50 M
+102.38 128.50 L
+102.38 132.00 L
+98.88 132.00 L
+closepath
+gsave fill grestore
+mstroke
+newpath 102.88 128.38 M
+106.38 128.38 L
+106.38 131.88 L
+102.88 131.88 L
+closepath
+gsave fill grestore
+mstroke
+newpath 106.88 128.12 M
+110.38 128.12 L
+110.38 131.62 L
+106.88 131.62 L
+closepath
+gsave fill grestore
+mstroke
+newpath 110.88 128.00 M
+114.38 128.00 L
+114.38 131.50 L
+110.88 131.50 L
+closepath
+gsave fill grestore
+mstroke
+newpath 114.75 128.12 M
+118.25 128.12 L
+118.25 131.62 L
+114.75 131.62 L
+closepath
+gsave fill grestore
+mstroke
+newpath 118.75 128.25 M
+122.25 128.25 L
+122.25 131.75 L
+118.75 131.75 L
+closepath
+gsave fill grestore
+mstroke
+newpath 122.75 128.00 M
+126.25 128.00 L
+126.25 131.50 L
+122.75 131.50 L
+closepath
+gsave fill grestore
+mstroke
+newpath 126.75 127.88 M
+130.25 127.88 L
+130.25 131.38 L
+126.75 131.38 L
+closepath
+gsave fill grestore
+mstroke
+newpath 130.62 127.62 M
+134.12 127.62 L
+134.12 131.12 L
+130.62 131.12 L
+closepath
+gsave fill grestore
+mstroke
+newpath 134.62 127.62 M
+138.12 127.62 L
+138.12 131.12 L
+134.62 131.12 L
+closepath
+gsave fill grestore
+mstroke
+newpath 138.62 127.50 M
+142.12 127.50 L
+142.12 131.00 L
+138.62 131.00 L
+closepath
+gsave fill grestore
+mstroke
+newpath 142.62 127.38 M
+146.12 127.38 L
+146.12 130.88 L
+142.62 130.88 L
+closepath
+gsave fill grestore
+mstroke
+newpath 146.62 127.38 M
+150.12 127.38 L
+150.12 130.88 L
+146.62 130.88 L
+closepath
+gsave fill grestore
+mstroke
+newpath 150.62 127.12 M
+154.12 127.12 L
+154.12 130.62 L
+150.62 130.62 L
+closepath
+gsave fill grestore
+mstroke
+newpath 154.62 127.12 M
+158.12 127.12 L
+158.12 130.62 L
+154.62 130.62 L
+closepath
+gsave fill grestore
+mstroke
+newpath 158.62 127.00 M
+162.12 127.00 L
+162.12 130.50 L
+158.62 130.50 L
+closepath
+gsave fill grestore
+mstroke
+newpath 162.50 127.12 M
+166.00 127.12 L
+166.00 130.62 L
+162.50 130.62 L
+closepath
+gsave fill grestore
+mstroke
+newpath 166.50 127.00 M
+170.00 127.00 L
+170.00 130.50 L
+166.50 130.50 L
+closepath
+gsave fill grestore
+mstroke
+newpath 170.50 126.88 M
+174.00 126.88 L
+174.00 130.38 L
+170.50 130.38 L
+closepath
+gsave fill grestore
+mstroke
+newpath 174.38 126.75 M
+177.88 126.75 L
+177.88 130.25 L
+174.38 130.25 L
+closepath
+gsave fill grestore
+mstroke
+newpath 178.50 126.62 M
+182.00 126.62 L
+182.00 130.12 L
+178.50 130.12 L
+closepath
+gsave fill grestore
+mstroke
+newpath 182.38 126.38 M
+185.88 126.38 L
+185.88 129.88 L
+182.38 129.88 L
+closepath
+gsave fill grestore
+mstroke
+newpath 186.38 126.38 M
+189.88 126.38 L
+189.88 129.88 L
+186.38 129.88 L
+closepath
+gsave fill grestore
+mstroke
+newpath 190.38 126.25 M
+193.88 126.25 L
+193.88 129.75 L
+190.38 129.75 L
+closepath
+gsave fill grestore
+mstroke
+newpath 194.25 125.88 M
+197.75 125.88 L
+197.75 129.38 L
+194.25 129.38 L
+closepath
+gsave fill grestore
+mstroke
+newpath 198.38 123.88 M
+201.88 123.88 L
+201.88 127.38 L
+198.38 127.38 L
+closepath
+gsave fill grestore
+mstroke
+newpath 202.25 106.00 M
+205.75 106.00 L
+205.75 109.50 L
+202.25 109.50 L
+closepath
+gsave fill grestore
+mstroke
+newpath 206.25 92.38 M
+209.75 92.38 L
+209.75 95.88 L
+206.25 95.88 L
+closepath
+gsave fill grestore
+mstroke
+newpath 210.25 77.75 M
+213.75 77.75 L
+213.75 81.25 L
+210.25 81.25 L
+closepath
+gsave fill grestore
+mstroke
+newpath 214.12 28.00 M
+217.62 28.00 L
+217.62 31.50 L
+214.12 31.50 L
+closepath
+gsave fill grestore
+mstroke
+newpath 218.12 20.38 M
+221.62 20.38 L
+221.62 23.88 L
+218.12 23.88 L
+closepath
+gsave fill grestore
+mstroke
+newpath 222.12 20.12 M
+225.62 20.12 L
+225.62 23.62 L
+222.12 23.62 L
+closepath
+gsave fill grestore
+mstroke
+newpath 226.12 20.50 M
+229.62 20.50 L
+229.62 24.00 L
+226.12 24.00 L
+closepath
+gsave fill grestore
+mstroke
+newpath 230.12 20.25 M
+233.62 20.25 L
+233.62 23.75 L
+230.12 23.75 L
+closepath
+gsave fill grestore
+mstroke
+newpath 234.12 20.25 M
+237.62 20.25 L
+237.62 23.75 L
+234.12 23.75 L
+closepath
+gsave fill grestore
+mstroke
+newpath 238.00 20.50 M
+241.50 20.50 L
+241.50 24.00 L
+238.00 24.00 L
+closepath
+gsave fill grestore
+mstroke
+gsave
+[ ] sd
+newpath 49.12 131.12 M
+53.00 130.75 L
+57.00 131.12 L
+61.00 130.88 L
+65.00 130.62 L
+68.88 130.50 L
+72.88 130.25 L
+76.88 130.00 L
+80.88 129.75 L
+84.75 129.50 L
+88.75 129.00 L
+92.75 128.38 L
+96.75 128.00 L
+100.62 127.25 L
+104.62 126.50 L
+108.62 125.88 L
+112.62 124.75 L
+116.50 124.12 L
+120.50 123.00 L
+124.50 122.25 L
+128.50 121.25 L
+132.38 119.88 L
+136.38 118.88 L
+140.38 117.25 L
+144.38 115.62 L
+148.38 113.50 L
+152.38 109.88 L
+156.38 105.00 L
+160.25 97.88 L
+164.25 90.00 L
+168.25 81.00 L
+172.25 71.62 L
+176.25 57.88 L
+180.12 43.25 L
+184.12 32.50 L
+188.12 24.00 L
+192.12 20.12 L
+196.12 21.00 L
+200.00 20.75 L
+204.00 21.25 L
+208.00 20.62 L
+212.00 20.62 L
+216.00 20.75 L
+219.88 20.62 L
+223.88 20.75 L
+227.75 20.75 L
+231.75 22.00 L
+235.88 21.12 L
+239.75 22.12 L
+0.000 0.000 1.000 setrgbcolor
+2 setlinejoin
+gsave 1.00 ps mstroke grestore
+grestore
+newpath 47.38 131.12 M
+47.38 130.16 48.16 129.38 49.12 129.38 curveto
+50.09 129.38 50.88 130.16 50.88 131.12 curveto
+50.88 132.09 50.09 132.88 49.12 132.88 curveto
+48.16 132.88 47.38 132.09 47.38 131.12 curveto
+closepath
+0.000 0.000 1.000 setrgbcolor
+mstroke
+newpath 51.25 130.75 M
+51.25 129.78 52.03 129.00 53.00 129.00 curveto
+53.97 129.00 54.75 129.78 54.75 130.75 curveto
+54.75 131.72 53.97 132.50 53.00 132.50 curveto
+52.03 132.50 51.25 131.72 51.25 130.75 curveto
+closepath
+mstroke
+newpath 55.25 131.12 M
+55.25 130.16 56.03 129.38 57.00 129.38 curveto
+57.97 129.38 58.75 130.16 58.75 131.12 curveto
+58.75 132.09 57.97 132.88 57.00 132.88 curveto
+56.03 132.88 55.25 132.09 55.25 131.12 curveto
+closepath
+mstroke
+newpath 59.25 130.88 M
+59.25 129.91 60.03 129.12 61.00 129.12 curveto
+61.97 129.12 62.75 129.91 62.75 130.88 curveto
+62.75 131.84 61.97 132.62 61.00 132.62 curveto
+60.03 132.62 59.25 131.84 59.25 130.88 curveto
+closepath
+mstroke
+newpath 63.25 130.62 M
+63.25 129.66 64.03 128.88 65.00 128.88 curveto
+65.97 128.88 66.75 129.66 66.75 130.62 curveto
+66.75 131.59 65.97 132.38 65.00 132.38 curveto
+64.03 132.38 63.25 131.59 63.25 130.62 curveto
+closepath
+mstroke
+newpath 67.12 130.50 M
+67.12 129.53 67.91 128.75 68.88 128.75 curveto
+69.84 128.75 70.62 129.53 70.62 130.50 curveto
+70.62 131.47 69.84 132.25 68.88 132.25 curveto
+67.91 132.25 67.12 131.47 67.12 130.50 curveto
+closepath
+mstroke
+newpath 71.12 130.25 M
+71.12 129.28 71.91 128.50 72.88 128.50 curveto
+73.84 128.50 74.62 129.28 74.62 130.25 curveto
+74.62 131.22 73.84 132.00 72.88 132.00 curveto
+71.91 132.00 71.12 131.22 71.12 130.25 curveto
+closepath
+mstroke
+newpath 75.12 130.00 M
+75.12 129.03 75.91 128.25 76.88 128.25 curveto
+77.84 128.25 78.62 129.03 78.62 130.00 curveto
+78.62 130.97 77.84 131.75 76.88 131.75 curveto
+75.91 131.75 75.12 130.97 75.12 130.00 curveto
+closepath
+mstroke
+newpath 79.12 129.75 M
+79.12 128.78 79.91 128.00 80.88 128.00 curveto
+81.84 128.00 82.62 128.78 82.62 129.75 curveto
+82.62 130.72 81.84 131.50 80.88 131.50 curveto
+79.91 131.50 79.12 130.72 79.12 129.75 curveto
+closepath
+mstroke
+newpath 83.00 129.50 M
+83.00 128.53 83.78 127.75 84.75 127.75 curveto
+85.72 127.75 86.50 128.53 86.50 129.50 curveto
+86.50 130.47 85.72 131.25 84.75 131.25 curveto
+83.78 131.25 83.00 130.47 83.00 129.50 curveto
+closepath
+mstroke
+newpath 87.00 129.00 M
+87.00 128.03 87.78 127.25 88.75 127.25 curveto
+89.72 127.25 90.50 128.03 90.50 129.00 curveto
+90.50 129.97 89.72 130.75 88.75 130.75 curveto
+87.78 130.75 87.00 129.97 87.00 129.00 curveto
+closepath
+mstroke
+newpath 91.00 128.38 M
+91.00 127.41 91.78 126.62 92.75 126.62 curveto
+93.72 126.62 94.50 127.41 94.50 128.38 curveto
+94.50 129.34 93.72 130.12 92.75 130.12 curveto
+91.78 130.12 91.00 129.34 91.00 128.38 curveto
+closepath
+mstroke
+newpath 95.00 128.00 M
+95.00 127.03 95.78 126.25 96.75 126.25 curveto
+97.72 126.25 98.50 127.03 98.50 128.00 curveto
+98.50 128.97 97.72 129.75 96.75 129.75 curveto
+95.78 129.75 95.00 128.97 95.00 128.00 curveto
+closepath
+mstroke
+newpath 98.88 127.25 M
+98.88 126.28 99.66 125.50 100.62 125.50 curveto
+101.59 125.50 102.38 126.28 102.38 127.25 curveto
+102.38 128.22 101.59 129.00 100.62 129.00 curveto
+99.66 129.00 98.88 128.22 98.88 127.25 curveto
+closepath
+mstroke
+newpath 102.88 126.50 M
+102.88 125.53 103.66 124.75 104.62 124.75 curveto
+105.59 124.75 106.38 125.53 106.38 126.50 curveto
+106.38 127.47 105.59 128.25 104.62 128.25 curveto
+103.66 128.25 102.88 127.47 102.88 126.50 curveto
+closepath
+mstroke
+newpath 106.88 125.88 M
+106.88 124.91 107.66 124.12 108.62 124.12 curveto
+109.59 124.12 110.38 124.91 110.38 125.88 curveto
+110.38 126.84 109.59 127.62 108.62 127.62 curveto
+107.66 127.62 106.88 126.84 106.88 125.88 curveto
+closepath
+mstroke
+newpath 110.88 124.75 M
+110.88 123.78 111.66 123.00 112.62 123.00 curveto
+113.59 123.00 114.38 123.78 114.38 124.75 curveto
+114.38 125.72 113.59 126.50 112.62 126.50 curveto
+111.66 126.50 110.88 125.72 110.88 124.75 curveto
+closepath
+mstroke
+newpath 114.75 124.12 M
+114.75 123.16 115.53 122.38 116.50 122.38 curveto
+117.47 122.38 118.25 123.16 118.25 124.12 curveto
+118.25 125.09 117.47 125.88 116.50 125.88 curveto
+115.53 125.88 114.75 125.09 114.75 124.12 curveto
+closepath
+mstroke
+newpath 118.75 123.00 M
+118.75 122.03 119.53 121.25 120.50 121.25 curveto
+121.47 121.25 122.25 122.03 122.25 123.00 curveto
+122.25 123.97 121.47 124.75 120.50 124.75 curveto
+119.53 124.75 118.75 123.97 118.75 123.00 curveto
+closepath
+mstroke
+newpath 122.75 122.25 M
+122.75 121.28 123.53 120.50 124.50 120.50 curveto
+125.47 120.50 126.25 121.28 126.25 122.25 curveto
+126.25 123.22 125.47 124.00 124.50 124.00 curveto
+123.53 124.00 122.75 123.22 122.75 122.25 curveto
+closepath
+mstroke
+newpath 126.75 121.25 M
+126.75 120.28 127.53 119.50 128.50 119.50 curveto
+129.47 119.50 130.25 120.28 130.25 121.25 curveto
+130.25 122.22 129.47 123.00 128.50 123.00 curveto
+127.53 123.00 126.75 122.22 126.75 121.25 curveto
+closepath
+mstroke
+newpath 130.62 119.88 M
+130.62 118.91 131.41 118.12 132.38 118.12 curveto
+133.34 118.12 134.12 118.91 134.12 119.88 curveto
+134.12 120.84 133.34 121.62 132.38 121.62 curveto
+131.41 121.62 130.62 120.84 130.62 119.88 curveto
+closepath
+mstroke
+newpath 134.62 118.88 M
+134.62 117.91 135.41 117.12 136.38 117.12 curveto
+137.34 117.12 138.12 117.91 138.12 118.88 curveto
+138.12 119.84 137.34 120.62 136.38 120.62 curveto
+135.41 120.62 134.62 119.84 134.62 118.88 curveto
+closepath
+mstroke
+newpath 138.62 117.25 M
+138.62 116.28 139.41 115.50 140.38 115.50 curveto
+141.34 115.50 142.12 116.28 142.12 117.25 curveto
+142.12 118.22 141.34 119.00 140.38 119.00 curveto
+139.41 119.00 138.62 118.22 138.62 117.25 curveto
+closepath
+mstroke
+newpath 142.62 115.62 M
+142.62 114.66 143.41 113.88 144.38 113.88 curveto
+145.34 113.88 146.12 114.66 146.12 115.62 curveto
+146.12 116.59 145.34 117.38 144.38 117.38 curveto
+143.41 117.38 142.62 116.59 142.62 115.62 curveto
+closepath
+mstroke
+newpath 146.62 113.50 M
+146.62 112.53 147.41 111.75 148.38 111.75 curveto
+149.34 111.75 150.12 112.53 150.12 113.50 curveto
+150.12 114.47 149.34 115.25 148.38 115.25 curveto
+147.41 115.25 146.62 114.47 146.62 113.50 curveto
+closepath
+mstroke
+newpath 150.62 109.88 M
+150.62 108.91 151.41 108.12 152.38 108.12 curveto
+153.34 108.12 154.12 108.91 154.12 109.88 curveto
+154.12 110.84 153.34 111.62 152.38 111.62 curveto
+151.41 111.62 150.62 110.84 150.62 109.88 curveto
+closepath
+mstroke
+newpath 154.62 105.00 M
+154.62 104.03 155.41 103.25 156.38 103.25 curveto
+157.34 103.25 158.12 104.03 158.12 105.00 curveto
+158.12 105.97 157.34 106.75 156.38 106.75 curveto
+155.41 106.75 154.62 105.97 154.62 105.00 curveto
+closepath
+mstroke
+newpath 158.50 97.88 M
+158.50 96.91 159.28 96.12 160.25 96.12 curveto
+161.22 96.12 162.00 96.91 162.00 97.88 curveto
+162.00 98.84 161.22 99.62 160.25 99.62 curveto
+159.28 99.62 158.50 98.84 158.50 97.88 curveto
+closepath
+mstroke
+newpath 162.50 90.00 M
+162.50 89.03 163.28 88.25 164.25 88.25 curveto
+165.22 88.25 166.00 89.03 166.00 90.00 curveto
+166.00 90.97 165.22 91.75 164.25 91.75 curveto
+163.28 91.75 162.50 90.97 162.50 90.00 curveto
+closepath
+mstroke
+newpath 166.50 81.00 M
+166.50 80.03 167.28 79.25 168.25 79.25 curveto
+169.22 79.25 170.00 80.03 170.00 81.00 curveto
+170.00 81.97 169.22 82.75 168.25 82.75 curveto
+167.28 82.75 166.50 81.97 166.50 81.00 curveto
+closepath
+mstroke
+newpath 170.50 71.62 M
+170.50 70.66 171.28 69.88 172.25 69.88 curveto
+173.22 69.88 174.00 70.66 174.00 71.62 curveto
+174.00 72.59 173.22 73.38 172.25 73.38 curveto
+171.28 73.38 170.50 72.59 170.50 71.62 curveto
+closepath
+mstroke
+newpath 174.50 57.88 M
+174.50 56.91 175.28 56.12 176.25 56.12 curveto
+177.22 56.12 178.00 56.91 178.00 57.88 curveto
+178.00 58.84 177.22 59.62 176.25 59.62 curveto
+175.28 59.62 174.50 58.84 174.50 57.88 curveto
+closepath
+mstroke
+newpath 178.38 43.25 M
+178.38 42.28 179.16 41.50 180.12 41.50 curveto
+181.09 41.50 181.88 42.28 181.88 43.25 curveto
+181.88 44.22 181.09 45.00 180.12 45.00 curveto
+179.16 45.00 178.38 44.22 178.38 43.25 curveto
+closepath
+mstroke
+newpath 182.38 32.50 M
+182.38 31.53 183.16 30.75 184.12 30.75 curveto
+185.09 30.75 185.88 31.53 185.88 32.50 curveto
+185.88 33.47 185.09 34.25 184.12 34.25 curveto
+183.16 34.25 182.38 33.47 182.38 32.50 curveto
+closepath
+mstroke
+newpath 186.38 24.00 M
+186.38 23.03 187.16 22.25 188.12 22.25 curveto
+189.09 22.25 189.88 23.03 189.88 24.00 curveto
+189.88 24.97 189.09 25.75 188.12 25.75 curveto
+187.16 25.75 186.38 24.97 186.38 24.00 curveto
+closepath
+mstroke
+newpath 190.38 20.12 M
+190.38 19.16 191.16 18.38 192.12 18.38 curveto
+193.09 18.38 193.88 19.16 193.88 20.12 curveto
+193.88 21.09 193.09 21.88 192.12 21.88 curveto
+191.16 21.88 190.38 21.09 190.38 20.12 curveto
+closepath
+mstroke
+newpath 194.38 21.00 M
+194.38 20.03 195.16 19.25 196.12 19.25 curveto
+197.09 19.25 197.88 20.03 197.88 21.00 curveto
+197.88 21.97 197.09 22.75 196.12 22.75 curveto
+195.16 22.75 194.38 21.97 194.38 21.00 curveto
+closepath
+mstroke
+newpath 198.25 20.75 M
+198.25 19.78 199.03 19.00 200.00 19.00 curveto
+200.97 19.00 201.75 19.78 201.75 20.75 curveto
+201.75 21.72 200.97 22.50 200.00 22.50 curveto
+199.03 22.50 198.25 21.72 198.25 20.75 curveto
+closepath
+mstroke
+newpath 202.25 21.25 M
+202.25 20.28 203.03 19.50 204.00 19.50 curveto
+204.97 19.50 205.75 20.28 205.75 21.25 curveto
+205.75 22.22 204.97 23.00 204.00 23.00 curveto
+203.03 23.00 202.25 22.22 202.25 21.25 curveto
+closepath
+mstroke
+newpath 206.25 20.62 M
+206.25 19.66 207.03 18.88 208.00 18.88 curveto
+208.97 18.88 209.75 19.66 209.75 20.62 curveto
+209.75 21.59 208.97 22.38 208.00 22.38 curveto
+207.03 22.38 206.25 21.59 206.25 20.62 curveto
+closepath
+mstroke
+newpath 210.25 20.62 M
+210.25 19.66 211.03 18.88 212.00 18.88 curveto
+212.97 18.88 213.75 19.66 213.75 20.62 curveto
+213.75 21.59 212.97 22.38 212.00 22.38 curveto
+211.03 22.38 210.25 21.59 210.25 20.62 curveto
+closepath
+mstroke
+newpath 214.25 20.75 M
+214.25 19.78 215.03 19.00 216.00 19.00 curveto
+216.97 19.00 217.75 19.78 217.75 20.75 curveto
+217.75 21.72 216.97 22.50 216.00 22.50 curveto
+215.03 22.50 214.25 21.72 214.25 20.75 curveto
+closepath
+mstroke
+newpath 218.12 20.62 M
+218.12 19.66 218.91 18.88 219.88 18.88 curveto
+220.84 18.88 221.62 19.66 221.62 20.62 curveto
+221.62 21.59 220.84 22.38 219.88 22.38 curveto
+218.91 22.38 218.12 21.59 218.12 20.62 curveto
+closepath
+mstroke
+newpath 222.12 20.75 M
+222.12 19.78 222.91 19.00 223.88 19.00 curveto
+224.84 19.00 225.62 19.78 225.62 20.75 curveto
+225.62 21.72 224.84 22.50 223.88 22.50 curveto
+222.91 22.50 222.12 21.72 222.12 20.75 curveto
+closepath
+mstroke
+newpath 226.00 20.75 M
+226.00 19.78 226.78 19.00 227.75 19.00 curveto
+228.72 19.00 229.50 19.78 229.50 20.75 curveto
+229.50 21.72 228.72 22.50 227.75 22.50 curveto
+226.78 22.50 226.00 21.72 226.00 20.75 curveto
+closepath
+mstroke
+newpath 230.00 22.00 M
+230.00 21.03 230.78 20.25 231.75 20.25 curveto
+232.72 20.25 233.50 21.03 233.50 22.00 curveto
+233.50 22.97 232.72 23.75 231.75 23.75 curveto
+230.78 23.75 230.00 22.97 230.00 22.00 curveto
+closepath
+mstroke
+newpath 234.12 21.12 M
+234.12 20.16 234.91 19.38 235.88 19.38 curveto
+236.84 19.38 237.62 20.16 237.62 21.12 curveto
+237.62 22.09 236.84 22.88 235.88 22.88 curveto
+234.91 22.88 234.12 22.09 234.12 21.12 curveto
+closepath
+mstroke
+newpath 238.00 22.12 M
+238.00 21.16 238.78 20.38 239.75 20.38 curveto
+240.72 20.38 241.50 21.16 241.50 22.12 curveto
+241.50 23.09 240.72 23.88 239.75 23.88 curveto
+238.78 23.88 238.00 23.09 238.00 22.12 curveto
+closepath
+mstroke
+gsave
+[ ] sd
+newpath 49.12 131.12 M
+53.00 130.62 L
+57.00 129.88 L
+61.00 128.88 L
+65.00 127.88 L
+68.88 126.75 L
+72.88 125.50 L
+76.88 124.25 L
+80.88 122.75 L
+84.75 120.75 L
+92.75 114.88 L
+96.75 110.12 L
+100.62 103.00 L
+104.62 96.00 L
+108.62 88.62 L
+112.62 82.75 L
+116.50 78.25 L
+120.50 74.75 L
+128.50 69.00 L
+132.38 62.38 L
+136.38 53.75 L
+140.38 38.75 L
+144.38 34.00 L
+148.38 24.25 L
+152.38 27.50 L
+156.38 20.75 L
+160.25 23.50 L
+164.25 19.62 L
+168.25 19.38 L
+172.25 19.62 L
+176.25 20.88 L
+180.12 21.75 L
+184.12 22.12 L
+188.12 22.12 L
+192.12 22.00 L
+196.12 22.12 L
+200.00 22.12 L
+204.00 22.00 L
+208.00 22.12 L
+212.00 22.00 L
+216.00 22.00 L
+219.88 22.00 L
+223.88 22.12 L
+227.88 22.12 L
+231.88 22.00 L
+235.88 22.12 L
+239.75 22.00 L
+0.000 0.000 0.000 setrgbcolor
+2 setlinejoin
+gsave 1.00 ps mstroke grestore
+grestore
+newpath 49.12 129.12 M
+49.12 133.12 L
+0.000 0.000 0.000 setrgbcolor
+mstroke
+newpath 47.12 131.12 M
+51.12 131.12 L
+mstroke
+newpath 53.00 128.62 M
+53.00 132.62 L
+mstroke
+newpath 51.00 130.62 M
+55.00 130.62 L
+mstroke
+newpath 57.00 127.88 M
+57.00 131.88 L
+mstroke
+newpath 55.00 129.88 M
+59.00 129.88 L
+mstroke
+newpath 61.00 126.88 M
+61.00 130.88 L
+mstroke
+newpath 59.00 128.88 M
+63.00 128.88 L
+mstroke
+newpath 65.00 125.88 M
+65.00 129.88 L
+mstroke
+newpath 63.00 127.88 M
+67.00 127.88 L
+mstroke
+newpath 68.88 124.75 M
+68.88 128.75 L
+mstroke
+newpath 66.88 126.75 M
+70.88 126.75 L
+mstroke
+newpath 72.88 123.50 M
+72.88 127.50 L
+mstroke
+newpath 70.88 125.50 M
+74.88 125.50 L
+mstroke
+newpath 76.88 122.25 M
+76.88 126.25 L
+mstroke
+newpath 74.88 124.25 M
+78.88 124.25 L
+mstroke
+newpath 80.88 120.75 M
+80.88 124.75 L
+mstroke
+newpath 78.88 122.75 M
+82.88 122.75 L
+mstroke
+newpath 84.75 118.75 M
+84.75 122.75 L
+mstroke
+newpath 82.75 120.75 M
+86.75 120.75 L
+mstroke
+newpath 92.75 112.88 M
+92.75 116.88 L
+mstroke
+newpath 90.75 114.88 M
+94.75 114.88 L
+mstroke
+newpath 96.75 108.12 M
+96.75 112.12 L
+mstroke
+newpath 94.75 110.12 M
+98.75 110.12 L
+mstroke
+newpath 100.62 101.00 M
+100.62 105.00 L
+mstroke
+newpath 98.62 103.00 M
+102.62 103.00 L
+mstroke
+newpath 104.62 94.00 M
+104.62 98.00 L
+mstroke
+newpath 102.62 96.00 M
+106.62 96.00 L
+mstroke
+newpath 108.62 86.62 M
+108.62 90.62 L
+mstroke
+newpath 106.62 88.62 M
+110.62 88.62 L
+mstroke
+newpath 112.62 80.75 M
+112.62 84.75 L
+mstroke
+newpath 110.62 82.75 M
+114.62 82.75 L
+mstroke
+newpath 116.50 76.25 M
+116.50 80.25 L
+mstroke
+newpath 114.50 78.25 M
+118.50 78.25 L
+mstroke
+newpath 120.50 72.75 M
+120.50 76.75 L
+mstroke
+newpath 118.50 74.75 M
+122.50 74.75 L
+mstroke
+newpath 128.50 67.00 M
+128.50 71.00 L
+mstroke
+newpath 126.50 69.00 M
+130.50 69.00 L
+mstroke
+newpath 132.38 60.38 M
+132.38 64.38 L
+mstroke
+newpath 130.38 62.38 M
+134.38 62.38 L
+mstroke
+newpath 136.38 51.75 M
+136.38 55.75 L
+mstroke
+newpath 134.38 53.75 M
+138.38 53.75 L
+mstroke
+newpath 140.38 36.75 M
+140.38 40.75 L
+mstroke
+newpath 138.38 38.75 M
+142.38 38.75 L
+mstroke
+newpath 144.38 32.00 M
+144.38 36.00 L
+mstroke
+newpath 142.38 34.00 M
+146.38 34.00 L
+mstroke
+newpath 148.38 22.25 M
+148.38 26.25 L
+mstroke
+newpath 146.38 24.25 M
+150.38 24.25 L
+mstroke
+newpath 152.38 25.50 M
+152.38 29.50 L
+mstroke
+newpath 150.38 27.50 M
+154.38 27.50 L
+mstroke
+newpath 156.38 18.75 M
+156.38 22.75 L
+mstroke
+newpath 154.38 20.75 M
+158.38 20.75 L
+mstroke
+newpath 160.25 21.50 M
+160.25 25.50 L
+mstroke
+newpath 158.25 23.50 M
+162.25 23.50 L
+mstroke
+newpath 164.25 17.62 M
+164.25 21.62 L
+mstroke
+newpath 162.25 19.62 M
+166.25 19.62 L
+mstroke
+newpath 168.25 17.38 M
+168.25 21.38 L
+mstroke
+newpath 166.25 19.38 M
+170.25 19.38 L
+mstroke
+newpath 172.25 17.62 M
+172.25 21.62 L
+mstroke
+newpath 170.25 19.62 M
+174.25 19.62 L
+mstroke
+newpath 176.25 18.88 M
+176.25 22.88 L
+mstroke
+newpath 174.25 20.88 M
+178.25 20.88 L
+mstroke
+newpath 180.12 19.75 M
+180.12 23.75 L
+mstroke
+newpath 178.12 21.75 M
+182.12 21.75 L
+mstroke
+newpath 184.12 20.12 M
+184.12 24.12 L
+mstroke
+newpath 182.12 22.12 M
+186.12 22.12 L
+mstroke
+newpath 188.12 20.12 M
+188.12 24.12 L
+mstroke
+newpath 186.12 22.12 M
+190.12 22.12 L
+mstroke
+newpath 192.12 20.00 M
+192.12 24.00 L
+mstroke
+newpath 190.12 22.00 M
+194.12 22.00 L
+mstroke
+newpath 196.12 20.12 M
+196.12 24.12 L
+mstroke
+newpath 194.12 22.12 M
+198.12 22.12 L
+mstroke
+newpath 200.00 20.12 M
+200.00 24.12 L
+mstroke
+newpath 198.00 22.12 M
+202.00 22.12 L
+mstroke
+newpath 204.00 20.00 M
+204.00 24.00 L
+mstroke
+newpath 202.00 22.00 M
+206.00 22.00 L
+mstroke
+newpath 208.00 20.12 M
+208.00 24.12 L
+mstroke
+newpath 206.00 22.12 M
+210.00 22.12 L
+mstroke
+newpath 212.00 20.00 M
+212.00 24.00 L
+mstroke
+newpath 210.00 22.00 M
+214.00 22.00 L
+mstroke
+newpath 216.00 20.00 M
+216.00 24.00 L
+mstroke
+newpath 214.00 22.00 M
+218.00 22.00 L
+mstroke
+newpath 219.88 20.00 M
+219.88 24.00 L
+mstroke
+newpath 217.88 22.00 M
+221.88 22.00 L
+mstroke
+newpath 223.88 20.12 M
+223.88 24.12 L
+mstroke
+newpath 221.88 22.12 M
+225.88 22.12 L
+mstroke
+newpath 227.88 20.12 M
+227.88 24.12 L
+mstroke
+newpath 225.88 22.12 M
+229.88 22.12 L
+mstroke
+newpath 231.88 20.00 M
+231.88 24.00 L
+mstroke
+newpath 229.88 22.00 M
+233.88 22.00 L
+mstroke
+newpath 235.88 20.12 M
+235.88 24.12 L
+mstroke
+newpath 233.88 22.12 M
+237.88 22.12 L
+mstroke
+newpath 239.75 20.00 M
+239.75 24.00 L
+mstroke
+newpath 237.75 22.00 M
+241.75 22.00 L
+mstroke
+gsave
+grestore
+gsave
+[1.00 0.00 0.00 1.00 50.62 33.88] concat
+1.000 0.000 0.000 setrgbcolor
+gsave 1.00 ps [ ] sd newpath 1.50 5.88 M 20.25 5.88 L mstroke grestore
+newpath 9.12 4.12 M
+12.62 4.12 L
+12.62 7.62 L
+9.12 7.62 L
+closepath
+gsave fill grestore
+mstroke
+0.000 0.000 0.000 setrgbcolor
+10.00 (OF0) 0 F
+(-6\(217*6/812) 21.75 9.00 56.25 WS
+0.000 0.000 1.000 setrgbcolor
+gsave 1.00 ps [ ] sd newpath 1.50 17.00 M 20.25 17.00 L mstroke grestore
+newpath 9.12 17.00 M
+9.12 16.03 9.91 15.25 10.88 15.25 curveto
+11.84 15.25 12.62 16.03 12.62 17.00 curveto
+12.62 17.97 11.84 18.75 10.88 18.75 curveto
+9.91 18.75 9.12 17.97 9.12 17.00 curveto
+closepath
+mstroke
+0.000 0.000 0.000 setrgbcolor
+(92\(3:\(\),5) 21.75 20.12 44.88 WS
+gsave 1.00 ps [ ] sd newpath 1.50 28.12 M 20.25 28.12 L mstroke grestore
+newpath 10.88 26.12 M
+10.88 30.12 L
+mstroke
+newpath 8.88 28.12 M
+12.88 28.12 L
+mstroke
+(92\(3;\(\),5) 21.75 31.25 44.88 WS
+grestore
+gsave
+[1.00 0.00 0.00 1.00 56.88 75.12] concat
+10.00 (OF0) 0 F
+(<=>?) 0.00 9.00 28.12 WS
+(!$\(?1) 0.00 20.12 27.00 WS
+(@A>) 0.00 31.25 19.50 WS
+grestore
+AnObj restore
+end
+IgorSave restore
+%%Trailer
+%%EOF

@@ -1,0 +1,55 @@
+Measurements
+
+1. XRD symmetric scan of (00L) peaks shows monotonic expansion of the c-axis. Gd (20 nm) film has c-axis parameter expanded 4.7% compared to as-grown film.
+2. Cu L3-edge XAS shows monotonic shift of the resonance towards lower energy (measured withh TFY) (can we make any quantitative statement about the shift?). Shoulder at 933.5 eV is greatly suppressed (quantify this). New peak at 934 eV appears.
+3. Tc ZFC curves show a decrease in Tc, and a wider distribution of Tc; the transition is much more gradual.
+4. STEM to come...
+5. Reciprocal space maps show that the in-plane lattice parameter is not matched to the STO substrate, so the YBCO film has relaxed.
+
+
+XAS: Resonance shift -> lower valence state -> oxygen removal. Shoulder at 933.5 eV disappears -> depletion of CuO chains.
+PNR: Nuclear SLD -> expansion in c-axis. Nuclear SLD -> ??? Depends on uncertainty, whether the differences in SLD are significant in terms of oxygen concentration
+XRD: (00L) scans -> 5% expansion in out of plane lattice parameter. Emergent (poorly ordered?) phase starting in Gd (7 nm) and dominant in Gd (20 nm)
+RSM: (-103 sample, -109/-108 layer) maps -> in plane lattice parameter is not matched to substrate, even in as-grown sample. Lattice is relaxed.
+TC:  Shielding fraction Tc shift -> Tc is reduced by Gd deposition. Tc spread -> wider distribution of Tc in the films; has film gone polycrystalline/amorphous?
+
+
+RSM: expect peaks at h = 1.00385, 1.02225 for a = 3.89 Å, b = 3.82 Å, c = 11.68 Å
+
+
+
+
+Parallel Tempered, Lorentzian Fit
+
+As Grown
+-------------
+2theta = 15.1610±0.0006
+w = 0.0502±0.0008
+
+without worrying about the uncertainty inherent in the experiment, the uncertainty due to statistics from the fitting is
+d = 11.6780±0.0004 Å
+
+
+Gd 3 nm
+-------------
+2Theta = 15.1112±0.0005
+w = 0.0420±0.0006
+
+without worrying about the uncertainty inherent in the experiment, the uncertainty due to statistics from the fitting is
+d = 11.7163±0.0003 Å
+
+Gd 7 nm
+-------------
+2theta = 15.0602±0.0013
+w = 0.0818±0.0021
+
+without worrying about the uncertainty inherent in the experiment, the uncertainty due to statistics from the fitting is
+d = 11.7558±0.0010 Å
+
+Gd 20 nm
+-------------
+2theta = 14.4765±0.0036
+w = 0.3090±0.0051
+
+without worrying about the uncertainty inherent in the experiment, the uncertainty due to statistics from the fitting is
+d = 12.2271±0.0043 Å

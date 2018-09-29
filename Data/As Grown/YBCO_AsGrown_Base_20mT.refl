@@ -1,0 +1,131 @@
+# "template_data":{"template":{"modules":[{"y":10,"x":30,"module":"ncnr.refl.super_load.cached","title":"load spec","config":{"filelist":[{"path":"ncnrdata/ngd/201706/23773/data/YBCO_B38497.nxz.pbr","source":"ncnr","mtime":1498316737,"entries":["DOWN_DOWN"]},{"path":"ncnrdata/ngd/201706/23773/data/YBCO_B38497.nxz.pbr","source":"ncnr","mtime":1498316737,"entries":["UP_UP"]},{"path":"ncnrdata/ngd/201706/23773/data/YBCO_B38493.nxz.pbr","source":"ncnr","mtime":1498311046,"entries":["DOWN_DOWN"]},{"path":"ncnrdata/ngd/201706/23773/data/YBCO_B38493.nxz.pbr","source":"ncnr","mtime":1498311046,"entries":["UP_UP"]},{"path":"ncnrdata/ngd/201706/23773/data/YBCO_B38489.nxz.pbr","source":"ncnr","mtime":1498300598,"entries":["DOWN_DOWN"]},{"path":"ncnrdata/ngd/201706/23773/data/YBCO_B38489.nxz.pbr","source":"ncnr","mtime":1498300598,"entries":["UP_UP"]},{"path":"ncnrdata/ngd/201706/23773/data/YBCO_B38477.nxz.pbr","source":"ncnr","mtime":1498288892,"entries":["DOWN_DOWN"]},{"path":"ncnrdata/ngd/201706/23773/data/YBCO_B38477.nxz.pbr","source":"ncnr","mtime":1498288892,"entries":["UP_UP"]},{"path":"ncnrdata/ngd/201706/23773/data/YBCO_B38473.nxz.pbr","source":"ncnr","mtime":1498278441,"entries":["DOWN_DOWN"]},{"path":"ncnrdata/ngd/201706/23773/data/YBCO_B38473.nxz.pbr","source":"ncnr","mtime":1498278441,"entries":["UP_UP"]},{"path":"ncnrdata/ngd/201706/23773/data/YBCO_B38461.nxz.pbr","source":"ncnr","mtime":1498266711,"entries":["DOWN_DOWN"]},{"path":"ncnrdata/ngd/201706/23773/data/YBCO_B38461.nxz.pbr","source":"ncnr","mtime":1498266711,"entries":["UP_UP"]},{"path":"ncnrdata/ngd/201706/23773/data/YBCO_B38457.nxz.pbr","source":"ncnr","mtime":1498256281,"entries":["DOWN_DOWN"]},{"path":"ncnrdata/ngd/201706/23773/data/YBCO_B38457.nxz.pbr","source":"ncnr","mtime":1498256281,"entries":["UP_UP"]},{"path":"ncnrdata/ngd/201706/23773/data/YBCO_B38533.nxz.pbr","source":"ncnr","mtime":1498392214,"entries":["DOWN_DOWN"]},{"path":"ncnrdata/ngd/201706/23773/data/YBCO_B38533.nxz.pbr","source":"ncnr","mtime":1498392214,"entries":["UP_UP"]},{"path":"ncnrdata/ngd/201706/23773/data/YBCO_B38529.nxz.pbr","source":"ncnr","mtime":1498385760,"entries":["DOWN_DOWN"]},{"path":"ncnrdata/ngd/201706/23773/data/YBCO_B38529.nxz.pbr","source":"ncnr","mtime":1498385760,"entries":["UP_UP"]},{"path":"ncnrdata/ngd/201706/23773/data/YBCO_B38525.nxz.pbr","source":"ncnr","mtime":1498377409,"entries":["DOWN_DOWN"]},{"path":"ncnrdata/ngd/201706/23773/data/YBCO_B38525.nxz.pbr","source":"ncnr","mtime":1498377409,"entries":["UP_UP"]},{"path":"ncnrdata/ngd/201706/23773/data/YBCO_B38521.nxz.pbr","source":"ncnr","mtime":1498369037,"entries":["DOWN_DOWN"]},{"path":"ncnrdata/ngd/201706/23773/data/YBCO_B38521.nxz.pbr","source":"ncnr","mtime":1498369037,"entries":["UP_UP"]},{"path":"ncnrdata/ngd/201706/23773/data/YBCO_B38517.nxz.pbr","source":"ncnr","mtime":1498360659,"entries":["DOWN_DOWN"]},{"path":"ncnrdata/ngd/201706/23773/data/YBCO_B38517.nxz.pbr","source":"ncnr","mtime":1498360659,"entries":["UP_UP"]},{"path":"ncnrdata/ngd/201706/23773/data/YBCO_B38513.nxz.pbr","source":"ncnr","mtime":1498352255,"entries":["DOWN_DOWN"]},{"path":"ncnrdata/ngd/201706/23773/data/YBCO_B38513.nxz.pbr","source":"ncnr","mtime":1498352255,"entries":["UP_UP"]},{"path":"ncnrdata/ngd/201706/23773/data/YBCO_B38509.nxz.pbr","source":"ncnr","mtime":1498343864,"entries":["DOWN_DOWN"]},{"path":"ncnrdata/ngd/201706/23773/data/YBCO_B38509.nxz.pbr","source":"ncnr","mtime":1498343864,"entries":["UP_UP"]},{"path":"ncnrdata/ngd/201706/23773/data/YBCO_B38505.nxz.pbr","source":"ncnr","mtime":1498335504,"entries":["DOWN_DOWN"]},{"path":"ncnrdata/ngd/201706/23773/data/YBCO_B38505.nxz.pbr","source":"ncnr","mtime":1498335504,"entries":["UP_UP"]},{"path":"ncnrdata/ngd/201706/23773/data/YBCO_B38501.nxz.pbr","source":"ncnr","mtime":1498327129,"entries":["DOWN_DOWN"]},{"path":"ncnrdata/ngd/201706/23773/data/YBCO_B38501.nxz.pbr","source":"ncnr","mtime":1498327129,"entries":["UP_UP"]}]}},{"y":10,"x":170,"module":"ncnr.refl.mask_points","title":"mask","config":{"mask_indices":[[0,1,2],[0,1,2],[],[],[0,1,2],[0,1,2],[],[],[0,1,2],[0,1,2],[],[],[0,1,2],[0,1,2],[0,1,2],[0,1,2],[0,1,2],[0,1,2],[0,1,2],[0,1,2],[0,1,2],[0,1,2],[0,1,2],[0,1,2],[0,1,2],[0,1,2],[0,1,2],[0,1,2],[0,1,2],[0,1,2],[],[]]}},{"y":10,"x":310,"module":"ncnr.refl.join","title":"join"},{"y":50,"x":30,"module":"ncnr.refl.super_load.cached","title":"load bg+","config":{"filelist":[{"path":"ncnrdata/ngd/201706/23773/data/YBCO_B38469.nxz.pbr","source":"ncnr","mtime":1498272719,"entries":["DOWN_DOWN"]},{"path":"ncnrdata/ngd/201706/23773/data/YBCO_B38469.nxz.pbr","source":"ncnr","mtime":1498272719,"entries":["UP_UP"]},{"path":"ncnrdata/ngd/201706/23773/data/YBCO_B38465.nxz.pbr","source":"ncnr","mtime":1498269745,"entries":["DOWN_DOWN"]},{"path":"ncnrdata/ngd/201706/23773/data/YBCO_B38465.nxz.pbr","source":"ncnr","mtime":1498269745,"entries":["UP_UP"]},{"path":"ncnrdata/ngd/201706/23773/data/YBCO_B38445.nxz.pbr","source":"ncnr","mtime":1498244550,"entries":["DOWN_DOWN"]},{"path":"ncnrdata/ngd/201706/23773/data/YBCO_B38445.nxz.pbr","source":"ncnr","mtime":1498244550,"entries":["UP_UP"]},{"path":"ncnrdata/ngd/201706/23773/data/YBCO_B38441.nxz.pbr","source":"ncnr","mtime":1498241575,"entries":["DOWN_DOWN"]},{"path":"ncnrdata/ngd/201706/23773/data/YBCO_B38441.nxz.pbr","source":"ncnr","mtime":1498241575,"entries":["UP_UP"]}]}},{"y":50,"x":170,"module":"ncnr.refl.mask_points","title":"mask"},{"y":90,"x":30,"module":"ncnr.refl.super_load.cached","title":"load bg-","config":{"filelist":[{"path":"ncnrdata/ngd/201706/23773/data/YBCO_B38485.nxz.pbr","source":"ncnr","mtime":1498294893,"entries":["DOWN_DOWN"]},{"path":"ncnrdata/ngd/201706/23773/data/YBCO_B38485.nxz.pbr","source":"ncnr","mtime":1498294893,"entries":["UP_UP"]},{"path":"ncnrdata/ngd/201706/23773/data/YBCO_B38481.nxz.pbr","source":"ncnr","mtime":1498291933,"entries":["DOWN_DOWN"]},{"path":"ncnrdata/ngd/201706/23773/data/YBCO_B38481.nxz.pbr","source":"ncnr","mtime":1498291933,"entries":["UP_UP"]},{"path":"ncnrdata/ngd/201706/23773/data/YBCO_B38453.nxz.pbr","source":"ncnr","mtime":1498250559,"entries":["DOWN_DOWN"]},{"path":"ncnrdata/ngd/201706/23773/data/YBCO_B38453.nxz.pbr","source":"ncnr","mtime":1498250559,"entries":["UP_UP"]},{"path":"ncnrdata/ngd/201706/23773/data/YBCO_B38449.nxz.pbr","source":"ncnr","mtime":1498247593,"entries":["DOWN_DOWN"]},{"path":"ncnrdata/ngd/201706/23773/data/YBCO_B38449.nxz.pbr","source":"ncnr","mtime":1498247593,"entries":["UP_UP"]}]}},{"y":90,"x":170,"module":"ncnr.refl.mask_points","title":"mask"},{"y":90,"x":310,"module":"ncnr.refl.join","title":"join","config":{"group_by":"instrument"}},{"y":50,"x":310,"module":"ncnr.refl.join","title":"join","config":{"group_by":"instrument"}},{"y":130,"x":30,"config":{"intent":"intensity","filelist":[{"path":"ncnrdata/ngd/201706/23773/data/YBCO_B38537.nxz.pbr","source":"ncnr","mtime":1498395968,"entries":["DOWN_DOWN"]},{"path":"ncnrdata/ngd/201706/23773/data/YBCO_B38537.nxz.pbr","source":"ncnr","mtime":1498395968,"entries":["UP_DOWN"]},{"path":"ncnrdata/ngd/201706/23773/data/YBCO_B38537.nxz.pbr","source":"ncnr","mtime":1498395968,"entries":["DOWN_UP"]},{"path":"ncnrdata/ngd/201706/23773/data/YBCO_B38537.nxz.pbr","source":"ncnr","mtime":1498395968,"entries":["UP_UP"]}]},"module":"ncnr.refl.super_load.cached","title":"load slit"},{"y":130,"x":170,"module":"ncnr.refl.mask_points","title":"mask"},{"y":130,"x":310,"module":"ncnr.refl.rescale","title":"rescale"},{"y":100,"x":460,"config":{"group_by":"polarization","order":"file"},"module":"ncnr.refl.join","title":"join"},{"y":130,"x":460,"module":"ncnr.refl.spin_asymmetry","title":"Spin asymm"},{"y":10,"x":460,"module":"ncnr.refl.subtract_background","title":"Sub bkg"},{"y":65,"x":520,"module":"ncnr.refl.estimate_polarization","title":"Estim. Pol"},{"module":"ncnr.refl.spin_asymmetry","title":"Spin Asymmetry","x":1140,"y":90},{"module":"ncnr.refl.correct_polarization","title":"Correct Polarization","x":700,"y":5},{"module":"ncnr.refl.abinitio_footprint","title":"Abinitio Footprint","x":835,"y":70,"config":{"width":10,"Io":0.56}}],"wires":[{"source":[0,"output"],"target":[1,"data"]},{"source":[1,"output"],"target":[2,"data"]},{"source":[3,"output"],"target":[4,"data"]},{"source":[4,"output"],"target":[8,"data"]},{"source":[5,"output"],"target":[6,"data"]},{"source":[6,"output"],"target":[7,"data"]},{"source":[9,"output"],"target":[10,"data"]},{"source":[10,"output"],"target":[11,"data"]},{"source":[11,"output"],"target":[12,"data"]},{"source":[2,"output"],"target":[13,"data"]},{"source":[2,"output"],"target":[14,"data"]},{"source":[8,"output"],"target":[14,"backp"]},{"source":[7,"output"],"target":[14,"backm"]},{"source":[12,"output"],"target":[15,"data"]},{"source":[15,"polarization"],"target":[17,"polarization"]},{"source":[14,"output"],"target":[17,"data"]},{"source":[17,"output"],"target":[18,"data"]},{"source":[18,"outputs"],"target":[16,"data"]}]},"node":18,"terminal":"outputs","datasources":[{"url":"https://www.ncnr.nist.gov/pub/","start_path":"ncnrdata","name":"ncnr"}],"server_git_hash":"58d911d80b49e3d3a5b6a15d7c6c56de3b0db557","server_mtime":"2017-06-19T19:22:40.000Z","instrument_id":"ncnr.refl"}
+# "name": "YBCO_B38457"
+# "entry": "UP_UP"
+# "polarization": "++"
+# "wavelength": 4.75
+# "wavelength_resolution": 0.029999999329447746
+# "columns": ["Qz", "counts per incident count", "uncertainty", "resolution"]
+# "units": ["1/Ang", null, null, "1/Ang"]
+#8.0018704817e-03 nan nan 7.5419258960e-04
+8.9992151946e-03 1.0122565033e+00 6.7476587162e-03 7.5464043401e-04
+1.0001175344e-02 1.0157171668e+00 6.4346209098e-03 7.5514200991e-04
+1.1000825705e-02 1.0119640384e+00 6.2182346019e-03 7.5569423680e-04
+1.2000474495e-02 1.0217579873e+00 6.1248613259e-03 7.5630094705e-04
+1.3000120884e-02 1.0220777618e+00 6.0270272929e-03 7.5695874592e-04
+1.4002075822e-02 9.9892305071e-01 5.8420214353e-03 7.5766776375e-04
+1.5001718351e-02 8.6869013632e-01 5.0948381915e-03 7.5843041366e-04
+1.6001358738e-02 5.6046827531e-01 3.4122882079e-03 7.5924171958e-04
+1.7003307231e-02 2.7666411286e-01 1.8651211450e-03 7.6010803319e-04
+1.8000633891e-02 1.1183013343e-01 9.3739955654e-04 7.6102152571e-04
+1.9000268371e-02 7.0662748746e-02 6.7248338990e-04 7.6199046829e-04
+1.9997589766e-02 4.1651977606e-02 4.8369225087e-04 7.6300814534e-04
+2.0997218685e-02 2.0359955208e-02 3.3026676542e-04 7.6407652836e-04
+2.1999152212e-02 1.6059986607e-02 2.8256935881e-04 7.6519768038e-04
+2.2998774985e-02 1.6411817723e-02 2.7684175172e-04 7.6636454584e-04
+2.3998393098e-02 1.2717077590e-02 2.3274909488e-04 7.6758660188e-04
+2.4998009160e-02 6.7921242015e-03 1.8549942796e-04 7.6885611155e-04
+2.5997618901e-02 4.0684238718e-03 1.5240614001e-04 7.7017434998e-04
+2.6999536625e-02 3.8490403500e-03 1.4162558396e-04 7.7154449090e-04
+2.7996832609e-02 4.3515220040e-03 1.4218970895e-04 7.7295928754e-04
+2.8998742462e-02 3.9536184805e-03 1.3337071213e-04 7.7442847801e-04
+2.9998336489e-02 2.6447514953e-03 1.1893681921e-04 7.7593927739e-04
+3.0997928985e-02 1.3613708358e-03 1.0645646091e-04 7.7750538784e-04
+3.1999825948e-02 1.0299695464e-03 9.1582963631e-05 7.7911758500e-04
+3.2999406687e-02 1.1891821051e-03 8.8713085691e-05 7.8077393854e-04
+3.3998985466e-02 1.2588340595e-03 9.1600621546e-05 7.8248260918e-04
+3.4998559391e-02 1.1291925561e-03 8.4516728732e-05 7.8423173546e-04
+3.6000434415e-02 5.9168422161e-04 8.0606456516e-05 7.8603502645e-04
+3.6997689354e-02 4.4550769853e-04 7.0760029991e-05 7.8788404760e-04
+3.7999556683e-02 2.9249507449e-04 6.4790277391e-05 7.8977218436e-04
+3.8996800938e-02 3.1234789355e-04 6.5980897721e-05 7.9171242203e-04
+3.9998654497e-02 4.5140162351e-04 6.1426150193e-05 7.9369216484e-04
+4.1000505070e-02 4.1349243107e-04 5.9230633149e-05 7.9572461160e-04
+4.1997732218e-02 2.9351716344e-04 5.1044910690e-05 7.9779503793e-04
+4.2999568161e-02 1.7874664670e-04 3.6957341274e-05 7.9991394719e-04
+4.3999091945e-02 1.2515409969e-04 3.9783030077e-05 8.0207981478e-04
+4.4998609447e-02 1.3396815465e-04 3.9128925315e-05 8.0427922899e-04
+4.5998117772e-02 1.7867259385e-04 4.3697119851e-05 8.0653219174e-04
+4.8998916939e-02 1.0839875608e-04 3.3172132297e-05 8.1353719569e-04
+5.1999655797e-02 1.2120117843e-04 3.2396671621e-05 8.2091609231e-04
+5.5000322227e-02 5.9107256207e-05 2.5466855197e-05 8.2866448360e-04
+5.7998612116e-02 4.2182263484e-05 2.5985383293e-05 8.3675979215e-04
+6.0999138674e-02 1.4763753873e-05 2.0129494578e-05 8.4521046761e-04
+6.3999581223e-02 1.0169394140e-05 2.0570847130e-05 8.5399700938e-04
+6.6999946908e-02 3.6630663318e-05 1.7486680970e-05 8.6310914728e-04
+7.0000220860e-02 4.6489072661e-05 1.8413326754e-05 8.7253660144e-04
+7.2998104791e-02 3.4676262131e-05 1.5525731681e-05 8.8226925030e-04
+7.6000500132e-02 -1.7959380348e-05 1.5604210311e-05 8.9229702289e-04
+7.9000497730e-02 8.7588832588e-06 1.2687377562e-05 9.0261006843e-04
+8.2000393654e-02 7.4240206024e-06 1.2867289284e-05 9.1319865224e-04
+8.4997873421e-02 1.2684240153e-05 1.0747662194e-05 9.2405322862e-04
+8.7999859532e-02 7.3416728456e-06 1.1581267424e-05 9.3516451960e-04
+9.0999421767e-02 1.9084623193e-05 9.5653575435e-06 9.4652338826e-04
+9.3998872385e-02 2.1829616692e-05 1.0156009504e-05 9.5812101276e-04
+9.7000501285e-02 2.2033372384e-05 8.9134865264e-06 9.6994875029e-04
+9.9999705991e-02 -9.3698023648e-06 9.5124156810e-06 9.8201691133e-04
+
+
+# "name": "YBCO_B38457"
+# "entry": "DOWN_DOWN"
+# "polarization": "--"
+# "wavelength": 4.75
+# "wavelength_resolution": 0.029999999329447746
+# "columns": ["Qz", "counts per incident count", "uncertainty", "resolution"]
+# "units": ["1/Ang", null, null, "1/Ang"]
+#8.0018704817e-03 nan nan 7.5419276679e-04
+8.9992151946e-03 1.0071709384e+00 6.7045732586e-03 7.5464043401e-04
+1.0001175344e-02 1.0084024851e+00 6.3868338472e-03 7.5514200991e-04
+1.1000825705e-02 1.0052297626e+00 6.1772220329e-03 7.5569423680e-04
+1.2000474495e-02 1.0108914849e+00 6.0647691307e-03 7.5630094705e-04
+1.3000120884e-02 1.0099852161e+00 5.9620831437e-03 7.5695874592e-04
+1.4002075822e-02 9.8339652614e-01 5.7593997807e-03 7.5766776375e-04
+1.5001718351e-02 8.5967532532e-01 5.0469512481e-03 7.5843041366e-04
+1.6001358738e-02 5.5192228928e-01 3.3646913480e-03 7.5924171958e-04
+1.7003307231e-02 2.7576739345e-01 1.8567704633e-03 7.6010803319e-04
+1.8000633891e-02 1.0922533944e-01 9.1895846021e-04 7.6102152571e-04
+1.9000268371e-02 7.0680067660e-02 6.6911042604e-04 7.6199046829e-04
+1.9997589766e-02 4.1026357440e-02 4.7671565675e-04 7.6300814534e-04
+2.0997218685e-02 2.0062913353e-02 3.2553370770e-04 7.6407652836e-04
+2.1999152212e-02 1.5989838524e-02 2.7970330031e-04 7.6519768038e-04
+2.2998774985e-02 1.5792904432e-02 2.7014076883e-04 7.6636454584e-04
+2.3998393098e-02 1.2369897139e-02 2.2814438173e-04 7.6758660188e-04
+2.4998009160e-02 6.8948020780e-03 1.8453689731e-04 7.6885611155e-04
+2.5997618901e-02 4.0162451977e-03 1.5027804541e-04 7.7017434998e-04
+2.6999536625e-02 3.7373612383e-03 1.3904378715e-04 7.7154449090e-04
+2.7996832609e-02 4.0554343886e-03 1.3793504818e-04 7.7295928754e-04
+2.8998742462e-02 3.9737898270e-03 1.3219481878e-04 7.7442847801e-04
+2.9998336489e-02 2.5565350807e-03 1.1672216080e-04 7.7593927739e-04
+3.0997928985e-02 1.3634799480e-03 1.0515682823e-04 7.7750538784e-04
+3.1999825948e-02 9.3945649516e-04 8.9379280001e-05 7.7911758500e-04
+3.2999406687e-02 1.1704280280e-03 8.7420125626e-05 7.8077393854e-04
+3.3998985466e-02 1.2047527980e-03 8.9889828815e-05 7.8248260918e-04
+3.4998559391e-02 1.0227682796e-03 8.2263777092e-05 7.8423173546e-04
+3.6000434415e-02 5.6191708722e-04 7.9206662060e-05 7.8603502645e-04
+3.6997689354e-02 4.6009595677e-04 7.0033971773e-05 7.8788404760e-04
+3.7999556683e-02 3.2509821734e-04 6.4393411477e-05 7.8977218436e-04
+3.8996800938e-02 2.9905119391e-04 6.4913093445e-05 7.9171242203e-04
+3.9998654497e-02 4.1746861982e-04 6.0147367505e-05 7.9369216484e-04
+4.1000505070e-02 5.2116578565e-04 6.0710304475e-05 7.9572461160e-04
+4.1997732218e-02 2.7296504809e-04 4.9926172725e-05 7.9779780112e-04
+4.2999568161e-02 1.6611698217e-04 3.6250977263e-05 7.9991394719e-04
+4.3999091945e-02 1.1234330641e-04 3.8899920323e-05 8.0207981478e-04
+4.4998609447e-02 1.1061413887e-04 3.7964568967e-05 8.0427922899e-04
+4.5998117772e-02 1.8370738277e-04 4.3292538879e-05 8.0653219174e-04
+4.8998916939e-02 8.4476546247e-05 3.1919129115e-05 8.1353719569e-04
+5.1999655797e-02 9.1516713728e-05 3.1041909689e-05 8.2091900310e-04
+5.5000322227e-02 5.1119889623e-05 2.4845568580e-05 8.2866448360e-04
+5.7998612116e-02 3.5164650202e-05 2.5410863402e-05 8.3675979215e-04
+6.0999138674e-02 1.6001090603e-05 1.9893805267e-05 8.4521046761e-04
+6.3999581223e-02 -1.7190267934e-06 1.9894707916e-05 8.5399700938e-04
+6.6999946908e-02 -6.4070031499e-06 1.5711212371e-05 8.6310914728e-04
+7.0000220860e-02 1.3682465005e-05 1.7172869745e-05 8.7253660144e-04
+7.2998104791e-02 3.1262982950e-05 1.5209805062e-05 8.8226925030e-04
+7.6000500132e-02 9.5368624617e-07 1.5910179023e-05 8.9229702289e-04
+7.9000497730e-02 5.3881292813e-06 1.2399800734e-05 9.0261006843e-04
+8.2000393654e-02 1.4008608031e-05 1.2877604004e-05 9.1319865224e-04
+8.4997873421e-02 1.2505330422e-05 1.0593731769e-05 9.2405322862e-04
+8.7999859532e-02 1.4133277663e-05 1.1603279031e-05 9.3516451960e-04
+9.0999421767e-02 1.8238120689e-05 9.4106442420e-06 9.4652338826e-04
+9.3998872385e-02 1.4596800873e-05 9.8242946751e-06 9.5812101276e-04
+9.7000501285e-02 5.5033742067e-07 8.1704548706e-06 9.6994875029e-04
+9.9999705991e-02 -7.8700164787e-06 9.4093193640e-06 9.8201691133e-04
