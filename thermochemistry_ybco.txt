@@ -1,0 +1,23 @@
+Gd2O3			dG = -1730 kJ/mol
+
+YBCO:
+
+0.5 Y2O3 + 2 BaO + 3 CuO -> YBa2Cu3O6.5			dH = -143						kJ/mol, dS is small
+
+0.5*(2Y + 3O) 	-> 0.5 Y2O3						dG = 0.5*(-1730) 	= -865		kJ/mol
+2Ba + 2O		-> 2 BaO						dG = 2*(-520.4)		= -1040.8	kJ/mol
+3Cu + 3O		-> 3 CuO						dG = 3*(-129.7)		= -389.1	kJ/mol
+
+Total:
+
+dG ~ -1040.8 - 389.1 - 865 - 143 = -2438 kJ/mol
+
+
+26 Gd + 6 YBa2Cu3O6.5 -> 13 Gd2O3 + 6*(Y + 2Ba + 3Cu)
+
+= 13*(-1730) + 6*2481 = -22490 + 14886 = -7604 kJ
+
+
+YBa2Cu3O6.5 + 4.333 Gd -> Y + 2 Ba + 3 Cu + 2.166 Gd2O3
+
++2438 - 2.166*1730 = -1309 kJ
