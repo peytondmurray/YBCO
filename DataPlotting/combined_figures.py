@@ -66,6 +66,7 @@ def plot_only_magnetization():
     cmap = get_cmap('inferno')
     # cmap_colors = [0.0, 0.3, 0.5, 0.6]
     colors = {"AG": 'black', "3nm": 'saddlebrown', "7nm": 'darkgoldenrod', "20nm": "olivedrab"}
+    axes.axhline(color='k')
 
     for name in ["AG", "3nm", "7nm", "20nm"]:
         # if name != "20nm":
@@ -74,9 +75,9 @@ def plot_only_magnetization():
             axes.plot(T_m[name], M[name], linestyle='-', color=colors[name])
 
     axes.set_xlim([0, 100])
-    axes.set_ylim([-6e-7, 6e-7])
+    axes.set_ylim([-15e-7, 15e-7])
 
-    fig.set_size_inches(4, 4)
+    fig.set_size_inches(6, 4)
     fig.tight_layout()
 
     # plt.savefig("R and M vs T.svg", bbox_inches="tight")
